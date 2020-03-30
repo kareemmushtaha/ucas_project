@@ -14,13 +14,14 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Marco</title>
+    <title>GazaFood</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!-- CSS  ============================================= -->
     <link rel="stylesheet" href="{{ asset('ShowUser/css/linearicons.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('ShowUser/css/bootstrap-rtl.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/nice-select.css')}}">

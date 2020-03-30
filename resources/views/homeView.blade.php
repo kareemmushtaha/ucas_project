@@ -9,11 +9,12 @@
                 <div class="col-lg-12 banner-content">
 
                     <h6 class="text-white">Wide Options of Choice</h6>
-                    <h1 class="text-white">Gaza Food</h1>
-                    <p class="text-white">
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.
-                    </p>
-                    <a href="#" class="primary-btn text-uppercase">Check Our Menu</a>
+                    <h1 class="text-white" style="text-align: center;"> مطااعم غزة</h1>
+                    <h6 class="text-white" style="text-align: center;">
+                        منصة مطاعم تشمل جميع المطاعم بكل انواعها مطاعم, فلسطينية, شرقية غربية ,شعبية, مقاهي , شاورما
+                        .
+                    </h6>
+
                 </div>
             </div>
         </div>
@@ -25,14 +26,16 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 home-about-left">
-                    <h1>About Our Story</h1>
-                    <p>
-                        Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <a href="#" class="primary-btn">view full menu</a>
+                    <h1>عنا </h1>
+                    <p class="About-Us">
+                        موقعنا عبارة عن منصة لجميع مطاعم غزة بكل انواعها شرقية وغربية وشعبية وشاورما وبيتزا ومقاهى
+                        حيث انه نتيح للمطعم اليةادارة مطعمه بشكل احترافي وايضا نوفر للمستخدم رؤية جميع منتجات المطاعم
+                        والعروض المقدمة من قبل المطاعم مع امكانية شراء المنتجات الكترونيا. </p>
+                    <a href="#" class="primary-btn"> رؤية المزيد</a>
                 </div>
                 <div class="col-lg-6 home-about-right">
                     <img class="img-fluid" src="{{ asset('ShowUser/img/about-img.jpg')}}" alt="">
+
                 </div>
             </div>
         </div>
@@ -45,19 +48,20 @@
             <div class="row d-flex justify-content-center">
                 <div class="menu-content pb-70 col-lg-8">
                     <div class="title text-center">
-                        <h1 class="mb-10">What kind of Foods we serve for you</h1>
-                        <p>Who are in extremely love with eco friendly system.</p>
+                        <h1 class="mb-10">كل  المطاعم </h1>
+                        <p>جميع تصنيفات المطاعم</p>
                     </div>
                 </div>
             </div>
 
             <ul class="filter-wrap filters col-lg-12 no-padding">
-                <li class="active" data-filter="*">All Menu</li>
-                <li data-filter=".breakfast">Breakfast</li>
-                <li data-filter=".lunch">Lunch</li>
-                <li data-filter=".dinner">Dinner</li>
-                <li data-filter=".budget-meal">Budget Meal</li>
-                <li data-filter=".buffet">Buffet</li>
+                <li class="active" data-filter="*">All Resturent</li>
+                <li data-filter=".breakfast">مطاعم شعبية</li>
+                <li data-filter=".lunch">مطاعم شرقية</li>
+                <li data-filter=".dinnerr">مطاعم غربية </li>
+                <li data-filter=".budget-meal"> بيتزا</li>
+                <li data-filter=".buffet">شاورما</li>
+                <li data-filter=".buffet">مقاهي</li>
             </ul>
 
             <div class="filters-content">
@@ -65,66 +69,66 @@
                     <div class="col-md-6 all breakfast">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Cappuccion</h4>
+                                <h4>التايلندي</h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                 مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 all dinner">
+                    <div class="col-md-6 all dinnerr">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Americano</h4>
+                                <h4>التايلندي</h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 all budget-meal">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Macchiato</h4>
+                                <h4>التايلندي</h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 all breakfast">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Mocha</h4>
+                                <h4>التايلندي</h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 all lunch">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Piccolo Latte</h4>
+                                <h4>التايلندي </h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 all buffet">
                         <div class="single-menu">
                             <div class="title-wrap d-flex justify-content-between">
-                                <h4>Ristretto</h4>
+                                <h4>التايلندي</h4>
                                 <h4 class="price">$49</h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advance.
+                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
                             </p>
                         </div>
                     </div>
@@ -141,19 +145,22 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 reservation-left">
-                    <h1 class="text-white">Reserve Your Seats
-                        to Confirm if You Come
-                        with Your Family</h1>
+                    <h1 class="text-white"> ان كان هناك اي تعليق فعليك تعبئه هذا النموذج
+                       </h1>
                     <p class="text-white pt-20">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+                       قسم الادارة والمتابعة
                     </p>
                 </div>
                 <div class="col-lg-5 reservation-right">
                     <form class="form-wrap text-center" action="#">
-                        <input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
-                        <input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
-                        <input type="text" class="form-control" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" >
-                        <input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'" >
+                        <input type="text" class="form-control" name="name" placeholder="Your Name"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email Address"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
+                        <input type="text" class="form-control" name="phone" placeholder="Phone Number"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
+                        <input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'">
                         <div class="form-select" id="service-select">
                             <select>
                                 <option data-display="">Select Event</option>
@@ -248,7 +255,9 @@
                             <span class="fa fa-star"></span>
                         </div>
                         <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
+                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
+                            monitor, printer, scanner, speaker.”
                         </p>
                     </div>
                     <div class="single-review">
@@ -262,7 +271,9 @@
                             <span class="fa fa-star"></span>
                         </div>
                         <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
+                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
+                            monitor, printer, scanner, speaker.”
                         </p>
                     </div>
                     <div class="single-review">
@@ -276,7 +287,9 @@
                             <span class="fa fa-star"></span>
                         </div>
                         <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
+                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
+                            monitor, printer, scanner, speaker.”
                         </p>
                     </div>
                     <div class="single-review">
@@ -290,7 +303,9 @@
                             <span class="fa fa-star"></span>
                         </div>
                         <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
+                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
+                            monitor, printer, scanner, speaker.”
                         </p>
                     </div>
                 </div>
@@ -306,7 +321,8 @@
                 <div class="menu-content pb-70 col-lg-8">
                     <div class="title text-center">
                         <h1 class="mb-10">Latest From Our Blog</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
@@ -377,4 +393,4 @@
     <!-- End blog Area -->
 
 
-		@endsection
+@endsection

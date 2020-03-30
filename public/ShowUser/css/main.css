@@ -2059,7 +2059,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     color: #fff;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 17px;
     text-transform: uppercase;
     outline: none
 }
@@ -2382,7 +2382,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .home-about-left p {
     margin: 20px 0;
-    max-width: 490px
+    ext-align: justify;
 }
 
 .home-about-left .primary-btn:hover {

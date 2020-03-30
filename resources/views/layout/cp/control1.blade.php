@@ -30,9 +30,9 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
- 
+
   @include('layout.cp.nav')
- 
+
 
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -51,15 +51,15 @@
         </div>
       </div>
     </div>
-    
+
   @yield('TRY')
-   
+
   </div>
 
   @include('layout.cp.leftside')
   @include('layout.cp.footer')
-  
- 
+
+
 
 
   <aside class="control-sidebar control-sidebar-dark">

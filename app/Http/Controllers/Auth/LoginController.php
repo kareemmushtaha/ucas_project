@@ -56,10 +56,12 @@ class LoginController extends Controller
         }
         return back()->withInput($request->only('email', 'remember'));
     }
+    
     public function showBloggerLoginForm()
     {
         return view('auth.login', ['url' => 'blogger']);
     }
+
 
     public function bloggerLogin(Request $request)
     {
@@ -69,10 +71,11 @@ class LoginController extends Controller
         ]);
 
         if (Auth::guard('blogger')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-
+                
             return redirect()->intended('/blogger');
+            
         }
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withInput($request->only('email','remember'));
     }
 
 }

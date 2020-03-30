@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div id="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                    <a href="index.html"><img src="{{ asset('ShowUser/img/logo.png')}}" alt="" title=""
+                                              style="width: 140px;height: 140px;"/></a>
                 </div>
             </div>
         </div>
@@ -12,30 +13,15 @@
         <div class="row align-items-center justify-content-center d-flex">
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li class="menu-has-children"><a href="">Blog</a>
-                        <ul>
-                            <li><a href="blog-home.html">Blog Home</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="">Pages</a>
-                        <ul>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li class="menu-has-children"><a href="">Level 2 </a>
-                                <ul>
-                                    <li><a href="#">Item One</a></li>
-                                    <li><a href="#">Item Two</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="menu-has-children"><a href="">تواصل معنا</a></li>
+                    <li><a href="about.html">عنا </a></li>
+                    <li><a href="menu.html">المطاعم </a></li>
+                    <li><a href="gallery.html"> اخر العروض </a></li>
+                    <li><a href="index.html">الرئيسية </a></li>
                 </ul>
-            </nav><!-- #nav-menu-container -->
+            </nav>
+
+            <!-- #nav-menu-container -->
         </div>
     </div>
 </header>
