@@ -19,7 +19,7 @@ class servesResturentController extends Controller
     public function index()
     {
        $data=servesResturent::all();
-       return view('dashpoard.bossAdmin.servesResturent.index',compact('data'));
+       return view('dashboard.bossAdmin.servesResturent.index',compact('data'));
     }
 
     /**
@@ -30,8 +30,9 @@ class servesResturentController extends Controller
     public function create()
     {
         $data = Blogger::all();
-        return view('dashpoard.bossAdmin.servesResturent.create', compact('data'));
+        return view('dashboard.bossAdmin.servesResturent.create', compact('data'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -41,13 +42,34 @@ class servesResturentController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate($this->rules(), $this->massages()); // validation
         $data = [
             'serves_name' => $request->serves_name,
             'Resturnt_id' => $request->Resturnt_id,
         ];
         servesResturent::create($data);
-        return redirect("servesAllRestaurant");
+        return redirect("servesAllRestaurant")->with('success',"Create Serves Successfully $request->serves_name ");
     }
+
+
+    private function rules($id = null)
+    {
+        return [
+            'serves_name' => 'required',
+            'Resturnt_id' => 'required',
+        ];
+        return $rules;
+    }
+
+    private function massages()
+    {
+        return [
+            'serves_name.required' => 'Enter Serves Name',
+            'Resturnt_id.required' => 'Pleas Chose Restaurant ',
+        ];
+    }
+
 
     /**
      * Display the specified resource.
@@ -70,7 +92,7 @@ class servesResturentController extends Controller
     {
         $data=servesResturent::find($id);
         $blogger=Blogger::all();
-        return view("dashpoard.bossAdmin.servesResturent.update",compact('data','blogger'));
+        return view("dashboard.bossAdmin.servesResturent.update",compact('data','blogger'));
     }
 
     /**
@@ -82,6 +104,7 @@ class servesResturentController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate($this->rules($id), $this->massages());
         $data=[
             'Resturnt_id'=>$request->Resturnt_id,
             'serves_name'=>$request->serves_name,
@@ -106,7 +129,7 @@ class servesResturentController extends Controller
     {
         $serves=servesResturent::find($id);
         $serves->delete();
-        return redirect('servesAllRestaurant');
+        return redirect('servesAllRestaurant')->with('success', "The Serves Restaurant (( $serves->serves_name )) deleted successfully ");
     }
 
 

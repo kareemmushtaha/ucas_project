@@ -11,6 +11,12 @@ class Blogger extends Authenticatable
 
     protected $guard = 'blogger';
 
+
+    public function TypeRestaurant()
+    {
+        return $this->belongsTo('\App\model\TypeRestaurant', 'TypeOf_id');
+    }
+
     public function aboutUs()
     {
         return $this->hasOne('\App\model\aboutusResturent', 'Resturnt_id');
@@ -38,7 +44,7 @@ class Blogger extends Authenticatable
 
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','TypeOf_id','img',
     ];
 
     protected $hidden = [

@@ -20,7 +20,7 @@ class categoryResturentController extends Controller
     {
 
         $restaurant = \App\model\category::with('restaurant')->get();
-        return view('dashpoard.bossAdmin.categoryRstuent.index', compact('restaurant'));
+        return view('dashboard.bossAdmin.categoryRstuent.index', compact('restaurant'));
     }
 
     /**
@@ -32,7 +32,7 @@ class categoryResturentController extends Controller
     {
 
         $data = Blogger::all();
-        return view('dashpoard.bossAdmin.categoryRstuent.create', compact('data'));
+        return view('dashboard.bossAdmin.categoryRstuent.create', compact('data'));
     }
 
     /**
@@ -94,7 +94,7 @@ class categoryResturentController extends Controller
         try {
             $data = category::findOrFail($id);
             $blogger = Blogger::all();
-            return view("dashpoard.bossAdmin.categoryRstuent.update", compact('data', 'blogger'));
+            return view("dashboard.bossAdmin.categoryRstuent.update", compact('data', 'blogger'));
         } catch (ModelNotFoundException $exception) {
             return redirect()->route('categoryAllRestaurant@index')->with('error', 'category not found');
         }
@@ -146,7 +146,7 @@ class categoryResturentController extends Controller
             ->orWhere('id', 'like', '%' . $q . '%')->get();
 
         if ($filteredUseres->count()) {
-            return view('dashpoard.bossAdmin.categoryRstuent.index')->with([
+            return view('dashboard.bossAdmin.categoryRstuent.index')->with([
                 'restaurant' => $filteredUseres,
             ]);
 

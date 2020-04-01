@@ -17,7 +17,6 @@
                 <a href="#" class="d-block">Alexander Pierce</a>
             </div>
         </div>
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -40,40 +39,45 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="/AllRestaurant" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> All Restaurant </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="/servesAllRestaurant" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> show serves resturent </p>
+                                <p> Serves Restaurant </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="/categoryAllRestaurant" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> show all category resturent</p>
+                                <p> Category Restaurant</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/" class="nav-link active">
+                            <a href="#" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> show imge resturent</p>
+                                <p> Img Restaurant</p>
                             </a>
                         </li>
-
 
                         <li class="nav-item">
-                            <a href="/" class="nav-link active">
+                            <a href="#" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> show all order resturent </p>
+                                <p> All Order Restaurant </p>
                             </a>
                         </li>
-
-
                         <li class="nav-item">
-                            <a href="/" class="nav-link active">
+                            <a href="#" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> show all meal resturent</p>
+                                <p> show all meal Restaurant</p>
                             </a>
                         </li>
+                    </ul>
 
 </aside>

@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('homeView');
 });
 
-
 /*---------------------    Start Route Login and Register  ----------------------------*/
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
@@ -26,6 +25,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
     Route::post('/blogger', 'LoginController@bloggerLogin');
 
 });
+
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
 
@@ -50,8 +50,9 @@ Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
     Route::Resource('servesAllRestaurant', 'servesResturentController');
     Route::Resource('categoryAllRestaurant', 'categoryResturentController');
     Route::post('/searchuser', 'categoryResturentController@search');
-});
 
+    Route::Resource('/AllRestaurant', 'AllRestaurantController');
+});
 
 Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=>'auth:blogger'], function () {
 
@@ -63,8 +64,6 @@ Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=
 
 //Route::get('/category', 'Restaurant\showCategorysController@getCategory')->middleware('auth:blogger');
 
-
-
 /* -----------------  Test Relation To Project  --------------- */
 
 Route::get('/AboutUsRestaurant', 'Admin\userResturentController@getAboutUsRestaurant');
@@ -75,18 +74,13 @@ Route::get('/getAllRestaurantByImg', 'Admin\userResturentController@getAllRestau
 Route::get('/RestaurantImg/{id}', 'Admin\userResturentController@getImgRestaurant');
 Route::get('/getRestaurantByImg/{id}', 'Admin\userResturentController@getRestaurantByImg');
 
-
-
-
 Route::get('/category', 'Admin\userResturentController@getCategory')->middleware('auth:blogger');
 Route::get('/getRestaurantByCategory/{id}', 'Admin\userResturentController@getRestaurantByCategory');
 Route::get('/getAllRestaurantByCategory', 'Admin\userResturentController@getAllRestaurantByCategory');
 
-
 Route::get('/getServes/{id}', 'Admin\userResturentController@getServes');
 Route::get('/getRestaurantByServes/{id}', 'Admin\userResturentController@getRestaurantByServes');
 Route::get('/getAllRestaurantByServes', 'Admin\userResturentController@getAllRestaurantByServes');
-
 
 Route::get('/getAdds/{id}', 'Admin\userResturentController@getAdds');
 Route::get('/getRestaurantByAdd/{id}', 'Admin\userResturentController@getRestaurantByAdd');

@@ -18,6 +18,8 @@ class CreateBloggersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('img')->default('null');
+            $table->string('Description')->nullable();
             $table->boolean('is_editor')->default(false);
             $table->rememberToken();
             $table->timestamps();

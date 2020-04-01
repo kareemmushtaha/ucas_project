@@ -19,8 +19,7 @@ class showCategorysController extends Controller
     {
         $blogger = auth('blogger')->user();
         $categories = $blogger->categories;
-//        $data['categories'] = $categories;
-        return view('dashpoard.Restaurant.categoryRestaurant.index', compact('categories'));
+        return view('dashboard.Restaurant.categoryRestaurant.index', compact('categories'));
     }
 
 
@@ -33,7 +32,7 @@ class showCategorysController extends Controller
     public function create()
     {
         $data = Blogger::all();
-        return view('dashpoard.Restaurant.categoryRestaurant.create', compact('data'));
+        return view('dashboard.Restaurant.categoryRestaurant.create', compact('data'));
     }
 
     /**
@@ -94,7 +93,7 @@ class showCategorysController extends Controller
     {
         try {
             $data = category::findOrFail($id);
-            return view("dashpoard.Restaurant.categoryRestaurant.update", compact('data'));
+            return view("dashboard.Restaurant.categoryRestaurant.update", compact('data'));
         } catch (ModelNotFoundException $exception) {
             return redirect()->route('category@index')->with('error', 'category not found');
         }
@@ -141,7 +140,7 @@ class showCategorysController extends Controller
             ->orWhere('id', 'like', '%' . $q . '%')->get();
 
         if ($filteredUseres->count()) {
-            return view('dashpoard.Restaurant.categoryRestaurant.index')->with([
+            return view('dashboard.Restaurant.categoryRestaurant.index')->with([
                 'categories' => $filteredUseres
             ]);
         } else {
