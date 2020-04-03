@@ -37,6 +37,12 @@ class Blogger extends Authenticatable
         return $this->hasMany('\App\model\servesResturent', 'Resturnt_id');
     }
 
+
+    public function getMeal()
+    {
+        return $this->hasMany('\App\model\meal', 'Resturnt_id');
+    }
+
     public function getAdds()
     {
         return $this->hasMany('\App\model\addsRestaurant', 'Resturnt_id');

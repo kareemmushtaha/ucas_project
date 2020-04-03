@@ -21,8 +21,9 @@
     <div class="col-12">
         <div class="card">
             <button class="btn btn-primary" type="submit"><a href="categoryAllRestaurant/create"
-                                                             style="color:wheat;">Create
-                    Resturent
+                                                             style="color:wheat;"><i class="fa fa-plus">Create
+                        Restaurant</i>
+
                 </a></button>
             <div class="card-header">
                 <h3 class="card-title">All Category Resturent</h3>
@@ -62,7 +63,7 @@
                             <td>
                                 <button class="btn btn-primary" type="submit"><a
                                         href="categoryAllRestaurant/{{ $rest->id }}/edit/"
-                                        class=" btn-primary"> Update</a>
+                                        class=" btn-primary"><i class="fa fa-edit"> Update</i></a>
                                 </button>
                             </td>
                             <td>
@@ -72,7 +73,7 @@
                                     <input name="_method" type="hidden" value="DELETE">
                                     <button class="btn btn-danger"
                                             onclick="return confirm(' ؟  هل أنت متأكد من عملية الحذف{{ $rest->category_name }}')"
-                                            type="submit">Delete
+                                            type="submit"><i class="fa fa-trash"> Delete</i>
                                     </button>
                                 </form>
                             </td>

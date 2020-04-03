@@ -48,21 +48,28 @@
                         <li class="nav-item">
                             <a href="/servesAllRestaurant" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> Serves Restaurant </p>
+                                <p> Serves Restaurants </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="/categoryAllRestaurant" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> Category Restaurant</p>
+                                <p> Categories Restaurants </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="/ImgAllRestaurant" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> Img Restaurant</p>
+                                <p> Img Restaurants</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/MealRestaurant" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Meal Restaurants </p>
                             </a>
                         </li>
 
@@ -72,12 +79,7 @@
                                 <p> All Order Restaurant </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p> show all meal Restaurant</p>
-                            </a>
-                        </li>
+
                     </ul>
 
 </aside>

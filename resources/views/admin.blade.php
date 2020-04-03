@@ -15,6 +15,6 @@
     </div>
 
     <div style="text-align: center;margin-top: 30px;">
-        <button style=" background-color: #3e5eff;border: none;font-family: Andalus;"> Go to the dashboard </button>
+        <button style=" background-color: #3e5eff;border: none;font-family: Andalus;"><a href="/userAdmin" style="color: white;"> Go to the dashboard</a> </button>
     </div>
 @endsection

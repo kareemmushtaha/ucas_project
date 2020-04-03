@@ -52,7 +52,7 @@
                         <tr>
                             <td>{{ $row->id }}</td>
                             <td>{{ $row->serves_name }} </td>
-                            <td> {{ App\Blogger::find($row->Resturnt_id)->name}}</td>
+                            <td> {{$row->getRestaurantByServes->name}}</td>
                             <td>
                                 <button class="btn btn-primary" type="submit"><a
                                         href="servesAllRestaurant/{{ $row->id }}/edit/"

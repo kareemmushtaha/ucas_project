@@ -54,11 +54,11 @@
                                 <option value="{{$row->id}}" selected>{{$row->Type_Name}}</option>
                             @endforeach
                         </select>
+
                         <div class="form-group">
                             <span style="color: red;">{{$errors->first('TypeOf_id')}} </span>
-
                             <div>
-                                @if($row->img!="NULL")
+                                @if($Restaurant->img!="NULL")
                                     <td><img src="{{  asset('/imgresturent/'.$Restaurant->img)  }}" width="100px"
                                              height="100px">
                                     </td>

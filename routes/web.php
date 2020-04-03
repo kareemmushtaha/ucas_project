@@ -23,12 +23,9 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
     Route::get('/blogger', 'LoginController@showBloggerLoginForm');
     Route::post('/admin', 'LoginController@adminLogin');
     Route::post('/blogger', 'LoginController@bloggerLogin');
-
 });
 
-
 Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
-
     Route::get('/admin', 'RegisterController@showAdminRegisterForm');
     Route::get('/blogger', 'RegisterController@showBloggerRegisterForm');
     Route::post('/admin', 'RegisterController@createAdmin');
@@ -45,30 +42,25 @@ Route::view('/blogger', 'blogger')->middleware('auth:blogger');
 /*------------------------    Finish Route Login and Register   --------------------------*/
 
 Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
-
     Route::Resource('userAdmin', 'userResturentController');
     Route::Resource('servesAllRestaurant', 'servesResturentController');
     Route::Resource('categoryAllRestaurant', 'categoryResturentController');
     Route::post('/searchuser', 'categoryResturentController@search');
-
     Route::Resource('/AllRestaurant', 'AllRestaurantController');
+    Route::Resource('/ImgAllRestaurant', 'ImgRestaurantController');
+    Route::Resource('/MealRestaurant', 'MealRestaurantController');
 });
 
 Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=>'auth:blogger'], function () {
-
     Route::Resource('/category', 'showCategorysController');
     Route::post('/searchuser', 'showCategorysController@search');
-
 });
 
-
 //Route::get('/category', 'Restaurant\showCategorysController@getCategory')->middleware('auth:blogger');
-
 /* -----------------  Test Relation To Project  --------------- */
 
 Route::get('/AboutUsRestaurant', 'Admin\userResturentController@getAboutUsRestaurant');
 Route::get('/AboutUsRestaurantName/{id}', 'Admin\userResturentController@geRestaurantName');
-
 
 Route::get('/getAllRestaurantByImg', 'Admin\userResturentController@getAllRestaurantByImg');
 Route::get('/RestaurantImg/{id}', 'Admin\userResturentController@getImgRestaurant');
@@ -85,6 +77,3 @@ Route::get('/getAllRestaurantByServes', 'Admin\userResturentController@getAllRes
 Route::get('/getAdds/{id}', 'Admin\userResturentController@getAdds');
 Route::get('/getRestaurantByAdd/{id}', 'Admin\userResturentController@getRestaurantByAdd');
 Route::get('/getAllRestaurantByAdd', 'Admin\userResturentController@getAllRestaurantByAdd');
-
-
-

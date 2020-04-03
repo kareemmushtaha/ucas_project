@@ -13,7 +13,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="name"> Category Nmae</label>
+                        <label for="name"> Category Name </label>
                         <input type="text" class="form-control" id="category_name" name="category_name"
                                placeholder="Enter category  Name">
                         <span style="color: red;">{{$errors->first('category_name')}} </span>

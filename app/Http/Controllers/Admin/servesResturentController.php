@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use App\model\servesResturent;
 use App\Blogger;
 
@@ -18,8 +20,10 @@ class servesResturentController extends Controller
      */
     public function index()
     {
-       $data=servesResturent::all();
+       $data=servesResturent::with('getRestaurantByServes')->get();
+        $data=servesResturent::paginate(5);
        return view('dashboard.bossAdmin.servesResturent.index',compact('data'));
+
     }
 
     /**
@@ -111,7 +115,7 @@ class servesResturentController extends Controller
 
         ];
         servesResturent::where('id',$id)->update($data);
-        return redirect('servesAllRestaurant');
+        return redirect('servesAllRestaurant')->with('success',"Update Serves Successfully $request->serves_name ");;
     }
 
 

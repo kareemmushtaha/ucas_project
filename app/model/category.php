@@ -15,4 +15,10 @@ class category extends Model
         return $this->belongsTo('App\Blogger', 'Resturnt_id');
     }
 
+    public function getMealCategory()
+    {
+        return $this->hasMany('\App\model\meal', 'category_id');
+    }
+
+
 }

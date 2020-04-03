@@ -50,10 +50,10 @@
                                 <option value="{{$row->id}}" selected>{{$row->Type_Name}}</option>
                             @endforeach
                         </select>
-
                         <span style="color: red;">{{$errors->first('TypeOf_id')}} </span>
+
                         <label for="img"> choose Photo</label>
-                        <div class="form-group">
+                          <div class="form-group">
                             <div class="file-field">
                                 <div>
                                     @if($row->img!="NULL")
