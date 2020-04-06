@@ -1,13 +1,9 @@
 @extends('layout.cp_restaurant.control1')
 @section('TRY')
 
-    <div class="col-12">
-        <h6>WELCOME :<i style="color: #ff5134"> {{auth('blogger')->user()->name}} </i>EMAIL :<i style="color: #ff5134"> {{auth('blogger')->user()->email}}</i></h6>
-    </div>
     <!--**************************** ERROR AND SUCCESS MESSAGE ********************************-->
     <div class="row">
         <div class="col-md-12">
-
         </div>
         @if(session()->has('error'))
             <div class="col-md-12">
@@ -20,27 +16,18 @@
         @endif
     </div>
     <!--**************************** END ERROR AND SUCCESS MESSAGE ********************************-->
-
     <div class="col-12">
         <div class="card">
-            <button class="btn btn-primary" type="submit"><a href="/Restaurant/category/create"
-                                                             style="color:wheat;"> <i class="fa fa-plus"> Create
-                        Restaurant</i>
-
+            <button class="btn btn-primary" type="submit"><a href="img/create" style="color:wheat;">
+                    <i class=" fa fa-plus"> Create Img Restaurant</i>
                 </a></button>
             <div class="card-header">
-                <h3 class="card-title">All Category Resturent</h3>
+                <h3 class="card-title"> Img All Restaurant</h3>
                 <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width:100%;">
-
-                        <div class="col-md-12">
-                            <form action="/Restaurant/searchuser" method="post">
-                                @csrf
-                                <input type="text" name="q" id="q" class="orm-control" placeholder="Search">
-                                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Search
-                                </button>
-                                <a href="/Restaurant/category" class="btn btn-danger"> Cancel</a>
-                            </form>
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -51,29 +38,36 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category Name</th>
+                        <th>Details</th>
+                        <th>Img Restaurant</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($categories as $rest)
+                    @foreach($img as $row)
                         <tr>
-                            <td>{{ $rest->id }}</td>
-                            <td>{{ $rest->category_name }}</td>
+                            <td>{{ $row->id }}</td>
+                            <td>{{ $row->details }} </td>
+                            @if($row->img!="NULL")
+                                <td><img src="{{ asset('/imgresturent/'.$row->img) }}" width="100px" height="100px">
+                                </td>
+                            @else
+                                <td><img src="{{ asset('/images/defult.jpeg') }}" width="100px" height="100px"></td>
+                            @endif
                             <td>
                                 <button class="btn btn-primary" type="submit"><a
-                                        href="/Restaurant/category/{{ $rest->id }}/edit/"
+                                        href="img/{{ $row->id }}/edit/"
                                         class=" btn-primary"><i class="fa fa-edit"> Update</i></a>
                                 </button>
                             </td>
                             <td>
-                                <form action="{{action('Restaurant\showCategorysController@destroy', $rest->id)}}"
+                                <form action="{{action('Restaurant\imgController@destroy', $row->id)}}"
                                       method="post">
                                     {{csrf_field()}}
                                     <input name="_method" type="hidden" value="DELETE">
                                     <button class="btn btn-danger"
-                                            onclick="return confirm(' ؟  هل أنت متأكد من عملية الحذف{{ $rest->category_name }}')"
+                                            onclick="return confirm(' ؟  هل أنت متأكد من عملية حذف الصورة التي تتبع للمطعم {{ $row->details }}')"
                                             type="submit"><i class="fa fa-trash"> Delete</i>
                                     </button>
                                 </form>
@@ -82,9 +76,9 @@
                     @endforeach
                     </tbody>
                 </table>
+                {{--                {{ $img->links() }}--}}
             </div>
         </div>
     </div>
-    <div>
-    </div>
+
 @endsection

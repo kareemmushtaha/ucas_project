@@ -4,19 +4,15 @@
     <list default="true" id="15ddf4d5-f872-4826-9ac9-2f3fc7117472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blogger.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blogger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/imgResturentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/mealResturentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/imgResturent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/imgRestaurant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/meal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/servesResturent/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/servesResturent/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +205,9 @@
       <workItem from="1585442270700" duration="7203000" />
       <workItem from="1585517008705" duration="60123000" />
       <workItem from="1585693760284" duration="13440000" />
-      <workItem from="1585721956841" duration="27327000" />
+      <workItem from="1585721956841" duration="29942000" />
+      <workItem from="1586041456407" duration="100000" />
+      <workItem from="1586041572624" duration="39667000" />
     </task>
     <servers />
   </component>
@@ -221,10 +219,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583708256221" />
-    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585723238849">
+    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586050618255">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1585723238849" />
+    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1586050618255" />
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583653311915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -233,10 +231,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584568310259" />
-    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1585603738002">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586041543932">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585603738002" />
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586041543932" />
     <state x="474" y="179" key="NewPhpClassDialog" timestamp="1583714810371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,18 +243,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="81" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584832932047" />
-    <state x="162" y="0" key="SettingsEditor" timestamp="1585794985977">
+    <state x="162" y="0" key="SettingsEditor" timestamp="1586159370152">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585794985977" />
+    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586159370152" />
     <state width="505" height="450" key="SwitcherDM" timestamp="1585071397770">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="505" height="450" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1585071397770" />
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1585721956583">
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586041575008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585721956583" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586041575008" />
     <state x="0" y="0" width="617" height="728" key="find.popup" timestamp="1585606138281">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -265,10 +263,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="209" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1583840523995" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1585721827328">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1586120046903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585721827328" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586120046903" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584866716450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

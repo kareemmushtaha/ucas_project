@@ -10,11 +10,19 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
+     /**
+      * The attributes that are mass assignable.
      *
      * @var array
      */
+
+/*-------------------          Many To Many Meal and User           ---------------------*/
+    public function meal()
+    {
+        return $this->belongsToMany('\App\model\meal', 'meal_user','user_id','meal_id');
+    }
+    /*-------------------       End Many To Many Meal and User           ---------------------*/
+
     protected $fillable = [
         'name', 'email', 'password',
     ];

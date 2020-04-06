@@ -5,30 +5,29 @@
         <!-- general form elements -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Title Table </h3>
+                <h3 class="card-title"> Create Serves </h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form method="post" action="{{ Route('category.store') }}">
+            <form method="post" action="{{ Route('serves.store') }}">
 
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="name"> Category Nmae</label>
-                        <input type="text" class="form-control" id="category_name" name="category_name"
-                               placeholder="Enter category  Name">
-                        <span style="color: red;">{{$errors->first('category_name')}} </span>
+                        <label for="name"> Serves Details</label>
+                        <textarea type="text" class="form-control" id="serves_name" name="serves_name"
+                                  placeholder="Enter Serves  Details"></textarea>
+                        <span style="color: red;">{{$errors->first('serves_name')}} </span>
                     </div>
-                    <label for="name"> Resturen follow</label>
 
+                    <label for="name"> Restaurant follow :</label>
+                    <i> {{auth('blogger')->user()->name}}</i>
 
                     <input type="hidden" value="{{auth('blogger')->user()->id}}" name="Resturnt_id">
 
-
                     <span style="color: red;">{{$errors->first('Resturnt_id')}} </span>
-
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"> Create </i></button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"> Create</i></button>
                     </div>
             </form>
         </div>

@@ -49,12 +49,22 @@ Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
     Route::Resource('/AllRestaurant', 'AllRestaurantController');
     Route::Resource('/ImgAllRestaurant', 'ImgRestaurantController');
     Route::Resource('/MealRestaurant', 'MealRestaurantController');
+
 });
+
+Route::Resource('/userMeal', 'Admin\orderRestaurantController');
+
+
 
 Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=>'auth:blogger'], function () {
     Route::Resource('/category', 'showCategorysController');
     Route::post('/searchuser', 'showCategorysController@search');
+    Route::Resource('/serves', 'servesController');
+    Route::Resource('/img', 'imgController');
 });
+
+
+
 
 //Route::get('/category', 'Restaurant\showCategorysController@getCategory')->middleware('auth:blogger');
 /* -----------------  Test Relation To Project  --------------- */

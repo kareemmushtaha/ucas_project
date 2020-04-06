@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\model\meal;
+use App\model\category;
+use App\Blogger;
+use App\User;
 
-class orderResturentController extends Controller
+class orderRestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +18,11 @@ class orderResturentController extends Controller
      */
     public function index()
     {
-        //
+        $meal =\App\model\meal::with('user')->first();
+        $meal = \App\model\meal::paginate(5);
+        return view('dashboard.bossAdmin.Order.index', compact('meal'));
     }
+
 
     /**
      * Show the form for creating a new resource.

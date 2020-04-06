@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Restaurant;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\model\meal;
-use App\model\category;
+use App\model\imgRestaurant;
 use App\Blogger;
 
-
-class MealRestaurantController extends Controller
+class imgController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +16,14 @@ class MealRestaurantController extends Controller
      */
     public function index()
     {
-        $meal = \App\model\meal::with('getMeal', 'RestaurantMeal')->get();
-        $meal = meal::paginate(5);
-        return view('dashboard.bossAdmin.mealRestaurant.index', compact('meal'));
+        $blogger = auth('blogger')->user();
+        $img = $blogger->getImg;
+
+//        $img=imgRestaurant::paginate(5);  اذا عملت البجنيشن بصير يعرض كل الصور الي بتخص
+//   المطعم والي ما بتخصه
+
+        return view('dashboard.Restaurant.img.index', compact('img'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -32,10 +32,7 @@ class MealRestaurantController extends Controller
      */
     public function create()
     {
-        $data = Blogger::all();
-        $category=category::all();
-        return view('dashboard.bossAdmin.mealRestaurant.create', compact('data','category'));
-
+        return view('dashboard.Restaurant.img.create');
     }
 
     /**
@@ -49,7 +46,7 @@ class MealRestaurantController extends Controller
         $request->validate($this->rules(), $this->massages()); // validation
 
         $files = $request->file('img');
-        if ($files) { // يعني اذا محمل صورة نفذ التالي
+        if ($files) {
             $destinationPath = public_path() . "/imgresturent/";
             $imgfile = date('YmdHis') . "." . $files->getClientOriginalExtension(); // هنا بتقله غيرلي اسم الصورة الي جاية للاسم التالي
             $files->move($destinationPath, $imgfile); // احفظلي الصورة بالمجلد الي نيوزبوست باسم الامتداد المطلوب
@@ -58,27 +55,20 @@ class MealRestaurantController extends Controller
             $imgfile = "NULL";
         }
 
-        $Meal = new meal();
-        $Meal->name = $request->input('name');
-        $Meal->details = $request->input('details');
-        $Meal->price = $request->input('price');
-        $Meal->img = $imgfile;
-        $Meal->category_id = $request->input('category_id');
-        $Meal->Resturnt_id = $request->input('Resturnt_id');;
+        $Img = new imgRestaurant();
+        $Img->details = $request->input('details');
+        $Img->Resturnt_id = $request->input('Resturnt_id');
+        $Img->img = $imgfile;
 
-        $result = $Meal->save();
+        $result = $Img->save();
         if ($result === TRUE)
-            return redirect("MealRestaurant")->with('success', " Meal (( $Meal->name )) saved successfully");
-
+            return redirect("Restaurant/img")->with('success', " Restaurant Img (($Img->details)) saved successfully");
     }
 
     private function rules($id = null)
     {
         return [
-            'name' => 'required',
             'details' => 'required',
-            'price' => 'required',
-            'category_id' => 'required',
             'Resturnt_id' => 'required',
         ];
         if ($id) {
@@ -94,11 +84,8 @@ class MealRestaurantController extends Controller
         return [
             'img.mimes' => 'Enter Img Type (( jpg or jpeg or png or gif))',
             'img.max' => 'The Picture Big siz',
-            'name.required' => 'Enter Name Meal',
-            'details.required' => 'Enter Details Meal',
-            'price.required' => 'Enter price Meal',
-            'category_id.unique' => 'Enter Category Follow',
-            'Resturnt_id.required' => 'Enter Restaurant Follow',
+            'details.required' => 'Enter  Details  Img Restaurant',
+            'Resturnt_id.required' => 'Enter   Restaurant Follower This Img',
         ];
     }
 
@@ -122,12 +109,10 @@ class MealRestaurantController extends Controller
     public function edit($id)
     {
         try {
-            $Meal = meal::findOrFail($id);
-            $data = Blogger::all();
-            $category=category::all();
-            return view("dashboard.bossAdmin.mealRestaurant.update", compact('data', 'category','Meal'));
+            $img = imgRestaurant::findOrFail($id);
+            return view("dashboard.Restaurant.img.update", compact('img'));
         } catch (ModelNotFoundException $exception) {
-            return redirect()->route('/MealRestaurant@index')->with('error', 'Meal not found');
+            return redirect()->route('Restaurant/img')->with('error', 'Img Not Found');
         }
     }
 
@@ -142,8 +127,8 @@ class MealRestaurantController extends Controller
     {
         try {
             //find model category
-            $Meal = meal::findOrFail($id);
-            $oldName = $Meal->name;
+            $img = imgRestaurant::findOrFail($id);
+            $oldName = $img->details;
             //validator in input
 
             $request->validate($this->rules($id), $this->massages());
@@ -162,22 +147,20 @@ class MealRestaurantController extends Controller
 //                if (File::exists(public_path($Restaurant->img))) {
 //                    File::delete(public_path($Restaurant->img));
 //               }
-                $Meal->img = $imgfile;
+                $img->img = $imgfile;
             }
-            $Meal->name = $request->input('name');
-            $Meal->details = $request->input('details');
-            $Meal->price = $request->input('price');
-            $Meal->category_id = $request->input('category_id');
-            $Meal->Resturnt_id = $request->input('Resturnt_id');
-            $Meal->update();
-            return redirect('/MealRestaurant')->with('success', "Meal $oldName Updated  Successfully");
+            $img->details = $request->input('details');
+            $img->Resturnt_id = $request->input('Resturnt_id');
+            $img->update();
+            return redirect('/Restaurant/img')->with('success', "Restaurant $oldName Updated  Successfully");
 
         } catch (ModelNotFoundExeption $modelNotFoundExeption) {
-            return redirect('/MealRestaurant')->with('error', 'Meal not found');
+            return redirect('/Restaurant/img')->with('error', 'Img Not Found');
         }
 
 //        Blogger::where('id', $id)->update($Restaurant);
-        return redirect('/MealRestaurant')->with('success', "Update (($request->name)) Successfully");
+        return redirect('/Restaurant/img')->with('success', "Update (($request->details)) Successfully");
+
     }
 
     /**
@@ -188,11 +171,8 @@ class MealRestaurantController extends Controller
      */
     public function destroy($id)
     {
-        $Meal = meal::find($id);
-        $Meal->delete();
-        return redirect('MealRestaurant')->with('success', "The Meal (($Meal->name))  was deleted successfully ");
+        $img = imgRestaurant::find($id);
+        $img->delete();
+        return redirect('Restaurant/img')->with('success', "The img $img->details Was Deleted");
     }
-
-
-
 }

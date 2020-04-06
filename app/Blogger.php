@@ -24,7 +24,7 @@ class Blogger extends Authenticatable
 
     public function getImg()
     {
-        return $this->hasMany('\App\model\imgResturent', 'Resturnt_id');
+        return $this->hasMany('\App\model\imgRestaurant', 'Resturnt_id');
     }
 
     public function categories()

@@ -32,48 +32,41 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/#" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p> All photos </p>
-                            </a>
-                        </li>
 
                         <li class="nav-item">
                             <a href="/Restaurant/category" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> All categories </p>
+                                <p> Categories </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="/Restaurant/img" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Photos </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Restaurant/serves" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Serves</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="/#" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> all Serves</p>
+                                <p> Adds </p>
                             </a>
                         </li>
-
-                        <li class="nav-item">
-                            <a href="/#" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p> All Adds </p>
-                            </a>
-                        </li>
-
-
                         <li class="nav-item">
                             <a href="/" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> All Meals  </p>
+                                <p> Meals </p>
                             </a>
                         </li>
-
-
                         <li class="nav-item">
                             <a href="/#" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>  About Us</p>
+                                <p> About Us</p>
                             </a>
                         </li>
-
 </aside>
