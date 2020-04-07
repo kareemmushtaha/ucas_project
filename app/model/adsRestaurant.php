@@ -4,7 +4,7 @@ namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class addsRestaurant extends Model
+class adsRestaurant extends Model
 {
     protected $table="adds_resturent";
     protected $fillable=['img','details','finish_add','Resturnt_id'];

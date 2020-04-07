@@ -20,5 +20,4 @@ class category extends Model
         return $this->hasMany('\App\model\meal', 'category_id');
     }
 
-
 }

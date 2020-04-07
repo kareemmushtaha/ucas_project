@@ -307,7 +307,7 @@ class userResturentController extends Controller
 //
 //    public function getRestaurantByAdd($id)
 //    {
-//        $restaurant = \App\model\addsRestaurant::where('id', $id)->with('getRestaurantByAdd')->get();
+//        $restaurant = \App\model\adsRestaurant::where('id', $id)->with('getRestaurantByAdd')->get();
 //        foreach ($restaurant as $rest) {
 //            echo $rest->details . " " . ' Restaurant -> ' . " " . $rest->getRestaurantByAdd->name;
 //        }

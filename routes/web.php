@@ -61,6 +61,8 @@ Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=
     Route::post('/searchuser', 'showCategorysController@search');
     Route::Resource('/serves', 'servesController');
     Route::Resource('/img', 'imgController');
+    Route::Resource('/Ads', 'adsController');
+    Route::Resource('/meal', 'mealController');
 });
 
 
