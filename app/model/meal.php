@@ -9,7 +9,6 @@ class meal extends Model
     protected $table = "meal_resturent";
     protected $fillable = ['name', 'img', 'details', 'price', 'category_id', 'Resturnt_id'];
 
-
     /*-------------------        Many To Many Meal and User           ---------------------*/
     public function user()
     {
@@ -17,13 +16,10 @@ class meal extends Model
     }
     /*-------------------       End Many To Many Meal and User           ---------------------*/
 
-
-
     public function RestaurantMeal()
     {
         return $this->belongsTo('App\Blogger', 'Resturnt_id');
     }
-
 
     public function getMeal()
     {

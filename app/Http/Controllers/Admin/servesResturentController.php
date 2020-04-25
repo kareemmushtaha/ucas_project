@@ -115,7 +115,7 @@ class servesResturentController extends Controller
 
         ];
         servesResturent::where('id',$id)->update($data);
-        return redirect('servesAllRestaurant')->with('success',"Update Serves Successfully $request->serves_name ");;
+        return redirect('servesAllRestaurant')->with('success',"Update Serves Successfully $request->serves_name ");
     }
 
 

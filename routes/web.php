@@ -10,12 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::get('/', function () {
+//    return view('homeView');
+//});
 
-Route::get('/', function () {
-    return view('homeView');
-});
+Route::get('/', 'Show\HomePageController@index');
 
 /*---------------------    Start Route Login and Register  ----------------------------*/
+
+Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
+    Route::get('/admin', 'RegisterController@showAdminRegisterForm');
+    Route::get('/blogger', 'RegisterController@showBloggerRegisterForm');
+    Route::post('/admin', 'RegisterController@createAdmin');
+    Route::post('/blogger', 'RegisterController@createBlogger');
+});
+
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
 
@@ -25,12 +35,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
     Route::post('/blogger', 'LoginController@bloggerLogin');
 });
 
-Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
-    Route::get('/admin', 'RegisterController@showAdminRegisterForm');
-    Route::get('/blogger', 'RegisterController@showBloggerRegisterForm');
-    Route::post('/admin', 'RegisterController@createAdmin');
-    Route::post('/blogger', 'RegisterController@createBlogger');
-});
+
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -49,12 +54,9 @@ Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
     Route::Resource('/AllRestaurant', 'AllRestaurantController');
     Route::Resource('/ImgAllRestaurant', 'ImgRestaurantController');
     Route::Resource('/MealRestaurant', 'MealRestaurantController');
+    Route::Resource('/userMeal', 'orderRestaurantController');
 
 });
-
-Route::Resource('/userMeal', 'Admin\orderRestaurantController');
-
-
 
 Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=>'auth:blogger'], function () {
     Route::Resource('/category', 'showCategorysController');
@@ -63,7 +65,11 @@ Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=
     Route::Resource('/img', 'imgController');
     Route::Resource('/Ads', 'adsController');
     Route::Resource('/meal', 'mealController');
+    Route::Resource('/aboutUs', 'aboutUsController');
+    Route::Resource('/OrderRestaurant', 'OrderController');
 });
+Route::Resource('/test', 'Restaurant\Test');
+
 
 
 

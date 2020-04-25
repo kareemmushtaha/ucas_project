@@ -30,7 +30,7 @@ class servesController extends Controller
     public function create()
     {
 
-        $data = Blogger::all();
+        $data = Blogger::all();/* !! ملهاش لازمة */
 
         return view('dashboard.Restaurant.img.create', compact('data'));
 

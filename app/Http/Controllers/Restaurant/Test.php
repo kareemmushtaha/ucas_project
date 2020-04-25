@@ -1,35 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Restaurant;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\model\meal;
-use App\model\category;
-use App\Blogger;
-use App\User;
-use mysql_xdevapi\Result;
+use  App\model\meal;
 
-class orderRestaurantController extends Controller
+class Test extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-
-        //$meal =\App\model\meal::with('user')->first();
-        $meal = \App\model\meal::paginate(15);
-        return view('dashboard.bossAdmin.Order.index', compact('meal'));
-
-//        $meal = \App\model\meal::with('user')->first();
-//        foreach ($meal->user as $me){
-//            echo $me->name .'</br>';
-//        }
-//        /*  اليوزر رقم 1 قام بعملية الشراء كم مرة */
-//        echo $meal->user->where('id',1)->sum('id') .'</br>';
+        /* Test Some Mathematical */
+        $number = meal::select('price')->where('id', 1)->get();
+        $number = $number->sum('price');
+        echo $number;
 
     }
 
@@ -96,19 +86,6 @@ class orderRestaurantController extends Controller
      */
     public function destroy($id)
     {
-
-
-//        $order = meal::find($id);
-//        $order->delete();
-//        return redirect('/userMeal')->with('success', "The Meal (($order->name))  was deleted successfully ");
+        //
     }
-
-//    public function delete($id)
-//    {
-//        DB::table('meal_resturent')->where('Resturnt_id', '=', $id)->delete();
-//        return redirect('userMeal');
-//    }
-//
-
-
 }

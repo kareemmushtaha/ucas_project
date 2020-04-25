@@ -20,7 +20,7 @@ class AllRestaurantController extends Controller
     public function index()
     {
         $data = Blogger::with('TypeRestaurant')->get();
-        $data = Blogger::paginate(5);
+        $data = Blogger::paginate(10);
         return view('dashboard.bossAdmin.AllRestaurant.index', compact('data'));
     }
 

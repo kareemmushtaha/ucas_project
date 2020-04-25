@@ -74,12 +74,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="/userMeal" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> All Order Restaurant </p>
+                                <p> All Order Restaurants </p>
                             </a>
                         </li>
-
                     </ul>
 
 </aside>

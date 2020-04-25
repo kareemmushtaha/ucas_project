@@ -20,11 +20,8 @@
 
     <div class="col-12">
         <div class="card">
-            <button class="btn btn-primary" type="submit"><a href="MealRestaurant/create"
-                                                             style="color:wheat;"><i class="fa fa-plus">Create
-                        Meal</i>
-
-                </a></button>
+            <button class="btn btn-primary" type="submit">
+            </button>
             <div class="card-header">
                 <h3 class="card-title">All Meal Restaurant</h3>
                 <div class="card-tools">
@@ -49,9 +46,12 @@
                     <tr>
                         <th> ID</th>
                         <th> Name</th>
+                        <th> category Name</th>
+                        <th> Restaurant Name</th>
                         <th> User Pay</th>
-                        <th> Update</th>
-                        <th> Delete</th>
+                        <th> User Count</th>
+                        <th> Price</th>
+                        <th> Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,29 +60,23 @@
                         <tr>
                             <td>{{ $rest->id }}</td>
                             <td>{{ $rest->name }}</td>
-                            <td>{{$rest->user}}</td>
+                            <td>{{ $rest->getMeal->category_name }}</td>
+                            <td>{{ $rest->RestaurantMeal->name }}</td>
+
                             <td>
-                                <button class="btn btn-primary" type="submit"><a
-                                        href="MealRestaurant/{{ $rest->id }}/edit/"
-                                        class=" btn-primary"><i class="fa fa-edit"> Update</i></a>
-                                </button>
+                                @foreach($rest->user as $one_user)
+                                    {{$one_user->name .' |& '}}
+                                @endforeach
                             </td>
-                            <td>
-                                <form action="{{action('Admin\MealRestaurantController@destroy', $rest->id)}}"
-                                      method="post">
-                                    {{csrf_field()}}
-                                    <input name="_method" type="hidden" value="DELETE">
-                                    <button class="btn btn-danger"
-                                            onclick="return confirm(' ؟  هل أنت متأكد من عملية حذف وجبة {{ $rest->name }}')"
-                                            type="submit"><i class="fa fa-trash"> Delete</i>
-                                    </button>
-                                </form>
-                            </td>
+                            <td> {{$rest->user->count()}}</td>
+                            <td>{{ $rest->price }}</td>
+                            <td> {{$rest->user->count() * $rest->price}}</td>
+
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
-                {{$meal->links() }}
+             {{$meal->links() }}
             </div>
         </div>
     </div>

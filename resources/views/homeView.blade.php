@@ -48,93 +48,42 @@
             <div class="row d-flex justify-content-center">
                 <div class="menu-content pb-70 col-lg-8">
                     <div class="title text-center">
-                        <h1 class="mb-10">كل  المطاعم </h1>
+                        <h1 class="mb-10">كل المطاعم </h1>
                         <p>جميع تصنيفات المطاعم</p>
                     </div>
                 </div>
             </div>
-
             <ul class="filter-wrap filters col-lg-12 no-padding">
-                <li class="active" data-filter="*">All Resturent</li>
-                <li data-filter=".breakfast">مطاعم شعبية</li>
-                <li data-filter=".lunch">مطاعم شرقية</li>
-                <li data-filter=".dinnerr">مطاعم غربية </li>
-                <li data-filter=".budget-meal"> بيتزا</li>
-                <li data-filter=".buffet">شاورما</li>
-                <li data-filter=".buffet">مقاهي</li>
+                <li class="active" data-filter="*">كل المطاعم</li>
+
+                @foreach($data as $type)
+                    <li class="{{$type->Type_Name}}" data-filter=".{{$type->Type_Name}}"> {{$type->Type_Name}} </li>
+                @endforeach
             </ul>
 
             <div class="filters-content">
                 <div class="row grid">
-                    <div class="col-md-6 all breakfast">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي</h4>
-                                <h4 class="price">$49</h4>
+                    @foreach($Restaurant as $rest)
+                        <div class="col-md-6 all {{$rest->TypeRestaurant->Type_Name}}">
+                            <div class="single-menu">
+                                <div class="title-wrap d-flex justify-content-between">
+                                    <h4> {{$rest->name}} </h4>
+                                    <h4 class="price">{{$rest->id}}</h4>
+                                </div>
+                                <p>
+                                    {{$rest->Description}}
+                                </p>
+                                <p>
+                                    {{$rest->TypeRestaurant->Type_Name}}
+                                </p>
                             </div>
-                            <p>
-                                 مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
                         </div>
-                    </div>
-                    <div class="col-md-6 all dinnerr">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي</h4>
-                                <h4 class="price">$49</h4>
-                            </div>
-                            <p>
-                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 all budget-meal">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي</h4>
-                                <h4 class="price">$49</h4>
-                            </div>
-                            <p>
-                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 all breakfast">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي</h4>
-                                <h4 class="price">$49</h4>
-                            </div>
-                            <p>
-                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 all lunch">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي </h4>
-                                <h4 class="price">$49</h4>
-                            </div>
-                            <p>
-                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 all buffet">
-                        <div class="single-menu">
-                            <div class="title-wrap d-flex justify-content-between">
-                                <h4>التايلندي</h4>
-                                <h4 class="price">$49</h4>
-                            </div>
-                            <p>
-                                مطعم التايلندي (جلسات هادئة - طعام لذيذ -شاورما)
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-            </div>
 
+                {{ $Restaurant->links() }}
+
+            </div>
         </div>
     </section>
     <!-- End menu-area Area -->
@@ -146,9 +95,9 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 reservation-left">
                     <h1 class="text-white"> ان كان هناك اي تعليق فعليك تعبئه هذا النموذج
-                       </h1>
+                    </h1>
                     <p class="text-white pt-20">
-                       قسم الادارة والمتابعة
+                        قسم الادارة والمتابعة
                     </p>
                 </div>
                 <div class="col-lg-5 reservation-right">
@@ -171,6 +120,7 @@
                             </select>
                         </div>
                         <button class="primary-btn text-uppercase mt-20">Make Reservation</button>
+
                     </form>
                 </div>
             </div>
@@ -178,66 +128,65 @@
     </section>
     <!-- End reservation Area -->
 
-    <!-- Start gallery-area Area -->
-    <section class="gallery-area section-gap" id="gallery">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-70 col-lg-8">
-                    <div class="title text-center">
-                        <h1 class="mb-10">Food and Customer Gallery</h1>
-                        <p>Who are in extremely love with eco friendly system.</p>
-                    </div>
-                </div>
-            </div>
+    {{--    <!-- Start gallery-area Area -->--}}
+    {{--    <section class="gallery-area section-gap" id="gallery">--}}
+    {{--        <div class="container">--}}
+    {{--            <div class="row d-flex justify-content-center">--}}
+    {{--                <div class="menu-content pb-70 col-lg-8">--}}
+    {{--                    <div class="title text-center">--}}
+    {{--                        <h1 class="mb-10">Food and Customer Gallery</h1>--}}
+    {{--                        <p>Who are in extremely love with eco friendly system.</p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
 
-            <ul class="filter-wrap filters col-lg-12 no-padding">
-                <li class="active" data-filter="*">All Menu</li>
-                <li data-filter=".breakfast">Breakfast</li>
-                <li data-filter=".lunch">Lunch</li>
-                <li data-filter=".dinner">Dinner</li>
-                <li data-filter=".budget-meal">Budget Meal</li>
-                <li data-filter=".buffet">Buffet</li>
-            </ul>
+    {{--            <ul class="filter-wrap filters col-lg-12 no-padding">--}}
+    {{--                <li class="active" data-filter="*">All Menu</li>--}}
+    {{--                <li data-filter=".breakfast">Breakfast</li>--}}
+    {{--                <li data-filter=".lunch">Lunch</li>--}}
+    {{--                <li data-filter=".dinner">Dinner</li>--}}
+    {{--                <li data-filter=".budget-meal">Budget Meal</li>--}}
+    {{--                <li data-filter=".buffet">Buffet</li>--}}
+    {{--            </ul>--}}
 
+    {{--            <div class="filters-content">--}}
+    {{--                <div class="row grid">--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g1.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all dinner">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g2.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all budget-meal">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g3.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g4.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all lunch">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g5.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all buffet">--}}
+    {{--                        <div class="single-gallery">--}}
+    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g6.jpg')}}" alt="">--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
 
-            <div class="filters-content">
-                <div class="row grid">
-                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g1.jpg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 all dinner">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g2.jpg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 all budget-meal">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g3.jpg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g4.jpg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 all lunch">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g5.jpg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 all buffet">
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ asset('ShowUser/img/g6.jpg')}}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    {{--        </div>--}}
+    {{--    </section>--}}
 
-        </div>
-    </section>
-    <!-- End gallery-area Area -->
 
     <!-- Start review Area -->
     <section class="review-area section-gap">

@@ -3,13 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="15ddf4d5-f872-4826-9ac9-2f3fc7117472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blogger.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blogger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AllRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AllRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderRestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/userResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/userResturentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/addsRestaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/adsRestaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminlte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/adminlte.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminlte.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/aboutusResturent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/aboutusResturent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/meal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homeView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homeView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -206,7 +217,50 @@
       <workItem from="1585721956841" duration="29942000" />
       <workItem from="1586041456407" duration="100000" />
       <workItem from="1586041572624" duration="46529000" />
-      <workItem from="1586214764597" duration="18960000" />
+      <workItem from="1586214764597" duration="46931000" />
+      <workItem from="1586379624632" duration="1768000" />
+      <workItem from="1586387057712" duration="12850000" />
+      <workItem from="1586461686726" duration="607000" />
+      <workItem from="1586465894366" duration="1796000" />
+      <workItem from="1586467703802" duration="1797000" />
+      <workItem from="1586469513617" duration="1797000" />
+      <workItem from="1586471329807" duration="2153000" />
+      <workItem from="1586474069899" duration="2110000" />
+      <workItem from="1586476193922" duration="1664000" />
+      <workItem from="1586477951260" duration="740000" />
+      <workItem from="1586479015249" duration="778000" />
+      <workItem from="1586479811817" duration="21000" />
+      <workItem from="1587161696719" duration="599000" />
+      <workItem from="1587251880161" duration="873000" />
+      <workItem from="1587254300987" duration="47000" />
+      <workItem from="1587510050551" duration="1413000" />
+      <workItem from="1587512041856" duration="1647000" />
+      <workItem from="1587514642753" duration="1771000" />
+      <workItem from="1587516453804" duration="1268000" />
+      <workItem from="1587518257390" duration="1910000" />
+      <workItem from="1587520183979" duration="906000" />
+      <workItem from="1587523484759" duration="1781000" />
+      <workItem from="1587525307530" duration="1575000" />
+      <workItem from="1587578433110" duration="1803000" />
+      <workItem from="1587580254546" duration="166000" />
+      <workItem from="1587582085066" duration="1784000" />
+      <workItem from="1587583890772" duration="622000" />
+      <workItem from="1587585766437" duration="1534000" />
+      <workItem from="1587587624146" duration="1793000" />
+      <workItem from="1587589573757" duration="1777000" />
+      <workItem from="1587593370517" duration="599000" />
+      <workItem from="1587595668227" duration="1620000" />
+      <workItem from="1587597472626" duration="1795000" />
+      <workItem from="1587599278730" duration="1794000" />
+      <workItem from="1587601086342" duration="757000" />
+      <workItem from="1587611873816" duration="602000" />
+      <workItem from="1587690917835" duration="1779000" />
+      <workItem from="1587692728020" duration="1585000" />
+      <workItem from="1587694642807" duration="1795000" />
+      <workItem from="1587696452404" duration="611000" />
+      <workItem from="1587711654378" duration="601000" />
+      <workItem from="1587713548852" duration="447000" />
+      <workItem from="1587714007480" duration="1888000" />
     </task>
     <servers />
   </component>
@@ -230,10 +284,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584568310259" />
-    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586041543932">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586479830395">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586041543932" />
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586479830395" />
     <state x="474" y="179" key="NewPhpClassDialog" timestamp="1583714810371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -242,18 +296,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="81" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584832932047" />
-    <state x="162" y="0" key="SettingsEditor" timestamp="1586159370152">
+    <state x="162" y="0" key="SettingsEditor" timestamp="1586477105124">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586159370152" />
-    <state width="505" height="450" key="SwitcherDM" timestamp="1585071397770">
+    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586477105124" />
+    <state width="505" height="450" key="SwitcherDM" timestamp="1586392715001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="505" height="450" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1585071397770" />
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586214809027">
+    <state width="505" height="450" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1586392715001" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1587773434736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586214809027" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587773434736" />
     <state x="0" y="0" width="617" height="728" key="find.popup" timestamp="1586222764793">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -262,13 +316,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="209" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1583840523995" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1586215587268">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1587695026930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586215587268" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584866716450">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587695026930" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586468924171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584866716450" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586468924171" />
   </component>
 </project>

@@ -192,7 +192,4 @@ class MealRestaurantController extends Controller
         $Meal->delete();
         return redirect('MealRestaurant')->with('success', "The Meal (($Meal->name))  was deleted successfully ");
     }
-
-
-
 }

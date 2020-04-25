@@ -1,16 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Restaurant;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\model\meal;
-use App\model\category;
 use App\Blogger;
-use App\User;
-use mysql_xdevapi\Result;
 
-class orderRestaurantController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,17 +15,9 @@ class orderRestaurantController extends Controller
      */
     public function index()
     {
-
-        //$meal =\App\model\meal::with('user')->first();
-        $meal = \App\model\meal::paginate(15);
-        return view('dashboard.bossAdmin.Order.index', compact('meal'));
-
-//        $meal = \App\model\meal::with('user')->first();
-//        foreach ($meal->user as $me){
-//            echo $me->name .'</br>';
-//        }
-//        /*  اليوزر رقم 1 قام بعملية الشراء كم مرة */
-//        echo $meal->user->where('id',1)->sum('id') .'</br>';
+        $blogger = auth('blogger')->user();
+        $meal = $blogger->getMeal;
+        return view('dashboard.Restaurant.Order.index', compact('meal'));
 
     }
 
@@ -96,19 +84,6 @@ class orderRestaurantController extends Controller
      */
     public function destroy($id)
     {
-
-
-//        $order = meal::find($id);
-//        $order->delete();
-//        return redirect('/userMeal')->with('success', "The Meal (($order->name))  was deleted successfully ");
+        //
     }
-
-//    public function delete($id)
-//    {
-//        DB::table('meal_resturent')->where('Resturnt_id', '=', $id)->delete();
-//        return redirect('userMeal');
-//    }
-//
-
-
 }

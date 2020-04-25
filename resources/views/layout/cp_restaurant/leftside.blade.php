@@ -65,14 +65,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="/" class="nav-link active">
+                            <a href="/Restaurant/OrderRestaurant" class="nav-link active">
                                 <i class="fas fa-shopping-basket"></i>
                                 <p> order </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/#" class="nav-link active">
+                            <a href="/Restaurant/aboutUs" class="nav-link active">
                                 <i class="far fa-address-card"></i>
                                 <p> About Us</p>
                             </a>

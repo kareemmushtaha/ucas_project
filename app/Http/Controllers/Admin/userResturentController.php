@@ -56,7 +56,7 @@ class userResturentController extends Controller
         $Restaurant = new Admin();
         $Restaurant->name = $request->input('name');
         $Restaurant->email = $request->input('email');
-        $Restaurant->password = $request->input('password');
+        $Restaurant->password = bcrypt($request->input('password'));
         $Restaurant->img = $imgfile;
         $result = $Restaurant->save();
         if ($result === TRUE)

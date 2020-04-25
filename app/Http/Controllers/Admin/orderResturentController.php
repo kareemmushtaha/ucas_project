@@ -4,13 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\model\meal;
-use App\model\category;
-use App\Blogger;
-use App\User;
-use mysql_xdevapi\Result;
 
-class orderRestaurantController extends Controller
+class orderResturentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,18 +14,7 @@ class orderRestaurantController extends Controller
      */
     public function index()
     {
-
-        //$meal =\App\model\meal::with('user')->first();
-        $meal = \App\model\meal::paginate(15);
-        return view('dashboard.bossAdmin.Order.index', compact('meal'));
-
-//        $meal = \App\model\meal::with('user')->first();
-//        foreach ($meal->user as $me){
-//            echo $me->name .'</br>';
-//        }
-//        /*  اليوزر رقم 1 قام بعملية الشراء كم مرة */
-//        echo $meal->user->where('id',1)->sum('id') .'</br>';
-
+        //
     }
 
     /**
@@ -46,7 +30,7 @@ class orderRestaurantController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -57,7 +41,7 @@ class orderRestaurantController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -68,7 +52,7 @@ class orderRestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -79,8 +63,8 @@ class orderRestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -91,24 +75,11 @@ class orderRestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-
-
-//        $order = meal::find($id);
-//        $order->delete();
-//        return redirect('/userMeal')->with('success', "The Meal (($order->name))  was deleted successfully ");
+        //
     }
-
-//    public function delete($id)
-//    {
-//        DB::table('meal_resturent')->where('Resturnt_id', '=', $id)->delete();
-//        return redirect('userMeal');
-//    }
-//
-
-
 }

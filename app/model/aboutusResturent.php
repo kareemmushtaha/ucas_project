@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model;
+namespace app\model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class aboutusResturent extends Model
 
     public function Restaurant()
     {
-        return $this->belongsTo('\App\model\aboutusResturent', 'Resturnt_id');
+        return $this->belongsTo('\App\Blogger', 'Resturnt_id');
     }
 
 
