@@ -16,8 +16,8 @@
                     <li class="menu-has-children"><a href="">تواصل معنا</a></li>
                     <li><a href="about.html">عنا </a></li>
                     <li><a href="menu.html">المطاعم </a></li>
-                    <li><a href="gallery.html"> اخر العروض </a></li>
-                    <li><a href="index.html">الرئيسية </a></li>
+                    <li><a href="/add"> اخر العروض </a></li>
+                    <li><a href="/">الرئيسية </a></li>
                 </ul>
             </nav>
 

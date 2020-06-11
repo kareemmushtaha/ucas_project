@@ -19,7 +19,7 @@
                         <span style="color: red;">{{$errors->first('category_name')}} </span>
                     </div>
                     <label for="name"> Resturen follow</label>
-                    <select class="browser-default custom-select" name="Resturnt_id">
+                    <select class="browser-default custom-select" name="8">
 
                         @foreach($data as $row)
                             <option value="{{$row->id}}" selected>{{$row->name}}</option>
@@ -30,17 +30,8 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
+                </div>
             </form>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 @endsection

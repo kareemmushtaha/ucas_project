@@ -67,7 +67,7 @@
                         <div class="col-md-6 all {{$rest->TypeRestaurant->Type_Name}}">
                             <div class="single-menu">
                                 <div class="title-wrap d-flex justify-content-between">
-                                    <h4> {{$rest->name}} </h4>
+                                    <h4><a href="/restaurant/{{ $rest->id }}/">{{$rest->name}} </a></h4>
                                     <h4 class="price">{{$rest->id}}</h4>
                                 </div>
                                 <p>
@@ -126,216 +126,45 @@
             </div>
         </div>
     </section>
-    <!-- End reservation Area -->
 
-    {{--    <!-- Start gallery-area Area -->--}}
-    {{--    <section class="gallery-area section-gap" id="gallery">--}}
-    {{--        <div class="container">--}}
-    {{--            <div class="row d-flex justify-content-center">--}}
-    {{--                <div class="menu-content pb-70 col-lg-8">--}}
-    {{--                    <div class="title text-center">--}}
-    {{--                        <h1 class="mb-10">Food and Customer Gallery</h1>--}}
-    {{--                        <p>Who are in extremely love with eco friendly system.</p>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-
-    {{--            <ul class="filter-wrap filters col-lg-12 no-padding">--}}
-    {{--                <li class="active" data-filter="*">All Menu</li>--}}
-    {{--                <li data-filter=".breakfast">Breakfast</li>--}}
-    {{--                <li data-filter=".lunch">Lunch</li>--}}
-    {{--                <li data-filter=".dinner">Dinner</li>--}}
-    {{--                <li data-filter=".budget-meal">Budget Meal</li>--}}
-    {{--                <li data-filter=".buffet">Buffet</li>--}}
-    {{--            </ul>--}}
-
-    {{--            <div class="filters-content">--}}
-    {{--                <div class="row grid">--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g1.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all dinner">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g2.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all budget-meal">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g3.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g4.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all lunch">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g5.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-4 col-md-6 col-sm-6 all buffet">--}}
-    {{--                        <div class="single-gallery">--}}
-    {{--                            <img class="img-fluid" src="{{ asset('ShowUser/img/g6.jpg')}}" alt="">--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-
-    {{--        </div>--}}
-    {{--    </section>--}}
-
-
-    <!-- Start review Area -->
-    <section class="review-area section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="active-review-carusel">
-                    <div class="single-review">
-                        <img src="img/user.png" alt="">
-                        <h4>Hulda Sutton</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
-                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
-                            monitor, printer, scanner, speaker.”
-                        </p>
-                    </div>
-                    <div class="single-review">
-                        <img src="img/user.png" alt="">
-                        <h4>Hulda Sutton</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
-                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
-                            monitor, printer, scanner, speaker.”
-                        </p>
-                    </div>
-                    <div class="single-review">
-                        <img src="img/user.png" alt="">
-                        <h4>Hulda Sutton</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
-                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
-                            monitor, printer, scanner, speaker.”
-                        </p>
-                    </div>
-                    <div class="single-review">
-                        <img src="img/user.png" alt="">
-                        <h4>Hulda Sutton</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p>
-                            “Accessories Here you can find the best computer accessory for your laptop, monitor,
-                            printer, scanner, speaker. Here you can find the best computer accessory for your laptop,
-                            monitor, printer, scanner, speaker.”
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End review Area -->
-
-    <!-- Start blog Area -->
     <section class="blog-area section-gap" id="blog">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="menu-content pb-70 col-lg-8">
                     <div class="title text-center">
-                        <h1 class="mb-10">Latest From Our Blog</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <h1 class="mb-10">آخر العروض</h1>
+                        <p>هنا يتم عرض احدث العروض المقدمة من المطاعم يمكنك رؤية المزيد </p>
                     </div>
                 </div>
             </div>
             <div class="row">
+                @foreach($adds as $add)
                 <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
                     <div class="thumb">
-                        <img class="img-fluid" src="{{ asset('ShowUser/img/b1.jpg')}}" alt="">
+
+                        @if($add->img!="NULL")
+                            <td><img class="img-fluid" src="{{ asset('/imgresturent/'.$add->img) }}" style="height: 250px !important; width: 250px !important;" alt="">
+                            </td>
+                        @else
+                            <td><img class="img-fluid" src="{{ asset('ShowUser/img/b1.jpg') }}" alt=""></td>
+                        @endif
+
+
+
+
+
+
                     </div>
-                    <p class="date">10 Jan 2018</p>
-                    <a href="blog-single.html"><h4>Cooking Perfect Fried Rice
-                            in minutes</h4></a>
+                    <a href="blog-single.html"><h4>
+                            {{$add->getRestaurantByAdd->name}}
+                        </h4></a>
                     <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                    <div class="meta-bottom d-flex justify-content-between">
-                        <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                        <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                    </div>
+                        {{$add->details}}
+                       </p>
+                    <p class="date">{{$add->finish_add}}</p>
+
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ asset('ShowUser/img/b2.jpg')}}" alt="">
-                    </div>
-                    <p class="date">10 Jan 2018</p>
-                    <a href="blog-single.html"><h4>Secret of making Heart
-                            Shaped eggs</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                    <div class="meta-bottom d-flex justify-content-between">
-                        <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                        <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ asset('ShowUser/img/b3.jpg')}}" alt="">
-                    </div>
-                    <p class="date">10 Jan 2018</p>
-                    <a href="blog-single.html"><h4>How to check steak if
-                            it is tender or not</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                    <div class="meta-bottom d-flex justify-content-between">
-                        <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                        <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ asset('ShowUser/img/b4.jpg')}}" alt="">
-                    </div>
-                    <p class="date">10 Jan 2018</p>
-                    <a href="blog-single.html"><h4>Seaseme and black seed
-                            Flavored Bun Rocks</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                    <div class="meta-bottom d-flex justify-content-between">
-                        <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                        <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

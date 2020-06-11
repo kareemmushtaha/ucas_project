@@ -21,6 +21,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('\App\model\meal', 'meal_user','user_id','meal_id');
     }
+
     /*-------------------       End Many To Many Meal and User           ---------------------*/
 
     protected $fillable = [

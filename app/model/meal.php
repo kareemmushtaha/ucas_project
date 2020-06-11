@@ -10,10 +10,12 @@ class meal extends Model
     protected $fillable = ['name', 'img', 'details', 'price', 'category_id', 'Resturnt_id'];
 
     /*-------------------        Many To Many Meal and User           ---------------------*/
+
     public function user()
     {
         return $this->belongsToMany('\App\User', 'meal_user', 'meal_id', 'user_id');
     }
+
     /*-------------------       End Many To Many Meal and User           ---------------------*/
 
     public function RestaurantMeal()

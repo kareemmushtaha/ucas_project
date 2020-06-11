@@ -35,10 +35,10 @@
         <label for="category_name"> Category Follow</label>
         <select class="browser-default custom-select" name="category_id">
             @foreach($category as $row)
-                <option value="{{$row->id}}" selected>{{$row->category_name}}</option>
+                <option value="{{$row->id}}" selected>{{$row->category_name}} -->{{$row->restaurant->name}}</option>
             @endforeach
         </select>
-        <span style="color: red;">{{$errors->first('category_id')}} </span>
+        <span style="color: red;">{{$errors->first('category_id')}}  </span>
 
 
         <label for="Resturnt_id"> Restaurant Follow</label>

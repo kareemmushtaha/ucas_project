@@ -3,23 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="15ddf4d5-f872-4826-9ac9-2f3fc7117472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blogger.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blogger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AllRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AllRestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImgRestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MealRestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderRestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/orderRestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/servesResturentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/categoryResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/categoryResturentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/userResturentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/userResturentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/aboutusResturent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/aboutusResturent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Show/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Show/HomePageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/meal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/Order/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ShowUser/css/bootstrap-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ShowUser/css/bootstrap-rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/categoryRestaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/AllRestaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/categoryRstuent/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/bossAdmin/mealRestaurant/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/Restaurant/categoryRestaurant/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/Restaurant/categoryRestaurant/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/Restaurant/categoryRestaurant/update.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/categoryRstuent/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/categoryRstuent/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/categoryRstuent/update.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/servesResturent/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/servesResturent/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/servesResturent/update.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/userResturent/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/userResturent/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashpoard/bossAdmin/userResturent/update.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/homeView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homeView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/PageView/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/PageView/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/PageView/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/PageView/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp/control1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp/control1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -31,9 +47,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/laravel6/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,12 +154,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
@@ -157,10 +171,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -261,11 +273,46 @@
       <workItem from="1587711654378" duration="601000" />
       <workItem from="1587713548852" duration="447000" />
       <workItem from="1587714007480" duration="1888000" />
+      <workItem from="1587854619887" duration="853000" />
+      <workItem from="1587931840645" duration="68000" />
+      <workItem from="1588028217951" duration="20235000" />
+      <workItem from="1589510487452" duration="1762000" />
+      <workItem from="1589612318906" duration="1214000" />
+      <workItem from="1589631134264" duration="1264000" />
+      <workItem from="1589676797016" duration="104000" />
+      <workItem from="1589767350478" duration="51000" />
+      <workItem from="1589767867157" duration="9378000" />
+      <workItem from="1589852369268" duration="386000" />
+      <workItem from="1589934971555" duration="764000" />
+      <workItem from="1590021425080" duration="1944000" />
+      <workItem from="1590048981506" duration="2144000" />
+      <workItem from="1590104534104" duration="1221000" />
+      <workItem from="1590152460137" duration="9000" />
+      <workItem from="1590197354494" duration="1422000" />
+      <workItem from="1590463627836" duration="59000" />
+      <workItem from="1590469511839" duration="58000" />
+      <workItem from="1590489120672" duration="104000" />
+      <workItem from="1590489551536" duration="1354000" />
+      <workItem from="1590491376050" duration="1379000" />
+      <workItem from="1590493197723" duration="972000" />
+      <workItem from="1590495012597" duration="1200000" />
+      <workItem from="1590496823761" duration="600000" />
+      <workItem from="1590546584153" duration="433000" />
+      <workItem from="1590550624119" duration="724000" />
+      <workItem from="1590551697272" duration="1203000" />
+      <workItem from="1590553515416" duration="1080000" />
+      <workItem from="1590648568749" duration="896000" />
+      <workItem from="1590651020412" duration="600000" />
+      <workItem from="1591574279468" duration="26000" />
+      <workItem from="1591574306490" duration="8098000" />
+      <workItem from="1591657150628" duration="2370000" />
+      <workItem from="1591667341252" duration="159000" />
+      <workItem from="1591748931880" duration="8773000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583708256221">
@@ -284,10 +331,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584568310259" />
-    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586479830395">
+    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl" timestamp="1591667493681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586479830395" />
+    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591667493681" />
     <state x="474" y="179" key="NewPhpClassDialog" timestamp="1583714810371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -308,18 +355,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587773434736" />
-    <state x="0" y="0" width="617" height="728" key="find.popup" timestamp="1586222764793">
+    <state x="0" y="0" width="617" height="728" key="find.popup" timestamp="1589519023066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="617" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586222764793" />
+    <state x="0" y="0" width="617" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1589519023066" />
     <state x="555" y="209" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1583840523995">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="209" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1583840523995" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1587695026930">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1588032013289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587695026930" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588032013289" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586468924171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

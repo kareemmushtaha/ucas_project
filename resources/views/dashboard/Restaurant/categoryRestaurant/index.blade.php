@@ -20,16 +20,15 @@
         @endif
     </div>
     <!--**************************** END ERROR AND SUCCESS MESSAGE ********************************-->
-
     <div class="col-12">
         <div class="card">
             <button class="btn btn-primary" type="submit"><a href="/Restaurant/category/create"
                                                              style="color:wheat;"> <i class="fa fa-plus"> Create
-                        Restaurant</i>
+                        Category</i>
 
                 </a></button>
             <div class="card-header">
-                <h3 class="card-title">All Category Resturent</h3>
+                <h3 class="card-title">All Category </h3>
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width:100%;">
 

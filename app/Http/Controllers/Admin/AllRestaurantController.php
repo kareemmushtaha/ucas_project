@@ -58,7 +58,7 @@ class AllRestaurantController extends Controller
         $Restaurant = new Blogger();
         $Restaurant->name = $request->input('name');
         $Restaurant->email = $request->input('email');
-        $Restaurant->password = $request->input('password');
+        $Restaurant->password =bcrypt($request->input('password'));
         $Restaurant->img = $imgfile;
         $Restaurant->Description = $request->input('Description');
         $Restaurant->TypeOf_id = $request->input('TypeOf_id');;
@@ -164,7 +164,7 @@ class AllRestaurantController extends Controller
             }
             $Restaurant->name = $request->input('name');
             $Restaurant->email = $request->input('email');
-            $Restaurant->password = $request->input('password');
+            $Restaurant->password =bcrypt($request->input('password'));
             $Restaurant->Description = $request->input('Description');
             $Restaurant->TypeOf_id = $request->input('TypeOf_id');
             $Restaurant->update();

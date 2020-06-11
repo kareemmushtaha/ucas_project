@@ -18,7 +18,6 @@ class categoryResturentController extends Controller
      */
     public function index()
     {
-
         $restaurant = \App\model\category::with('restaurant')->get();
         return view('dashboard.bossAdmin.categoryRstuent.index', compact('restaurant'));
     }
@@ -30,7 +29,6 @@ class categoryResturentController extends Controller
      */
     public function create()
     {
-
         $data = Blogger::all();
         return view('dashboard.bossAdmin.categoryRstuent.create', compact('data'));
     }

@@ -68,7 +68,7 @@
 
                                 <button class="btn btn-primary" type="submit"><a
                                         href="/AllRestaurant/{{ $row->id }}/edit/"
-                                        class=" btn-primary"> <span class="fa fa-edit"> Update</span></a>
+                                        class=" btn-primary"> <span class="fa fa-edit">Update</span></a>
                                 </button>
                             </td>
                             <td>

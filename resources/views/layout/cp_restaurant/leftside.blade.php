@@ -18,6 +18,20 @@
             </div>
         </div>
 
+        <div >
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+                <i class="icon-signout" style="color: white;"></i>
+
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </div>
+
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

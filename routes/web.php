@@ -16,7 +16,11 @@
 //});
 
 Route::get('/', 'Show\HomePageController@index');
+Route::get('/restaurant/{id}', 'Show\HomePageController@restaurant');
 
+Route::get('/kks', function () {
+    return view('RestaurantView');
+});
 /*---------------------    Start Route Login and Register  ----------------------------*/
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
@@ -25,7 +29,6 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
     Route::post('/admin', 'RegisterController@createAdmin');
     Route::post('/blogger', 'RegisterController@createBlogger');
 });
-
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
 
@@ -43,6 +46,7 @@ Auth::routes();
 Route::view('/home', 'home')->middleware('auth');
 Route::view('/admin', 'admin')->middleware('auth:admin');
 Route::view('/blogger', 'blogger')->middleware('auth:blogger');
+
 
 /*------------------------    Finish Route Login and Register   --------------------------*/
 
@@ -68,11 +72,8 @@ Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=
     Route::Resource('/aboutUs', 'aboutUsController');
     Route::Resource('/OrderRestaurant', 'OrderController');
 });
+
 Route::Resource('/test', 'Restaurant\Test');
-
-
-
-
 
 //Route::get('/category', 'Restaurant\showCategorysController@getCategory')->middleware('auth:blogger');
 /* -----------------  Test Relation To Project  --------------- */
@@ -95,3 +96,8 @@ Route::get('/getAllRestaurantByServes', 'Admin\userResturentController@getAllRes
 Route::get('/getAdds/{id}', 'Admin\userResturentController@getAdds');
 Route::get('/getRestaurantByAdd/{id}', 'Admin\userResturentController@getRestaurantByAdd');
 Route::get('/getAllRestaurantByAdd', 'Admin\userResturentController@getAllRestaurantByAdd');
+
+
+
+
+Route::view('/add', 'ResturantAdds');

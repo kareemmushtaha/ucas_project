@@ -20,7 +20,9 @@ class userResturentController extends Controller
     {
         $data = Admin::paginate(5);
         return view('dashboard.bossAdmin.userAdmin.index', compact('data'));
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -157,7 +159,7 @@ class userResturentController extends Controller
             }
             $Admin->name = $request->input('name');
             $Admin->email = $request->input('email');
-            $Admin->password = $request->input('password');
+            $Admin->password =bcrypt($request->input('password'));
             $Admin->update();
             return redirect('/userAdmin')->with('success', "Restaurant $oldNameAdmin Updated  Successfully to $Admin->name");
 

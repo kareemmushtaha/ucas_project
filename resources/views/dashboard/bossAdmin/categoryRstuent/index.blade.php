@@ -1,6 +1,7 @@
 @extends('layout.cp.control1')
 @section('TRY')
 
+
     <!--**************************** ERROR AND SUCCESS MESSAGE ********************************-->
     <div class="row">
         <div class="col-md-12">
