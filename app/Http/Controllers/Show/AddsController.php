@@ -1,31 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Restaurant;
+namespace App\Http\Controllers\Show;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Blogger;
+use App\model\addsRestaurant;
+use Illuminate\Support\Facades\DB;
 
-class OrderController extends Controller
+
+class AddsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show a list of all of the application's users.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        $orders = auth()->user()->orders;
-//        dd($orders);
-        $carts = $orders->transform(function ($cart, $key) {
-            return unserialize($cart->cart);
-        });
-//        dd($carts);
-        return view('order.index')->with('carts', $carts);
-//        $blogger = auth('blogger')->user();
-//        $meal = $blogger->getMeal;
-//        return view('dashboard.Restaurant.Order.index', compact('meal'));
-
+       $adds = addsRestaurant::orderByDesc('created_at')->paginate(15);
+        return view('ResturantAdds', compact('adds'));
     }
 
     /**
@@ -57,7 +50,8 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $adds = addsRestaurant::findOrFail($id);
+        return view('DetailsAdd', compact('adds'));
     }
 
     /**

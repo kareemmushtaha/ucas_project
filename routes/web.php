@@ -100,4 +100,17 @@ Route::get('/getAllRestaurantByAdd', 'Admin\userResturentController@getAllRestau
 
 
 
-Route::view('/add', 'ResturantAdds');
+
+
+
+
+
+Route::get('/add', 'Show\AddsController@index');
+Route::get('/detailsAdd/{id}', 'Show\AddsController@show');
+Route::get('/addToCart/{meal}', 'Restaurant\mealController@addToCart')->name('cart.add');
+Route::get('/shoppingCart', 'Restaurant\mealController@showCart')->name('cart.show');
+Route::get('/checkout/{amount}', 'Restaurant\mealController@checkout')->name('cart.checkout')->middleware('auth');
+Route::post('/charge', 'Restaurant\mealController@charge')->name('cart.charge');
+
+Route::get('/order', 'Restaurant\OrderController@index')->name('order.index')->middleware('auth');
+Route::delete('/meal/{meal}', 'Restaurant\mealController@destroyCart')->name('meal.remove');

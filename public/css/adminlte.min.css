@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem
+
 }
 
 abbr[data-original-title], abbr[title] {
@@ -2216,7 +2217,8 @@ textarea.form-control {
     background-color: #34ce57
 }
 
-.custom-control-input.is-valid:focus ~ .custom-control-label::before, .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before {
+.custom-control-input.is-valid:focus ~ .custom-control-label::before, .was-vali
+d .custom-control-input:valid:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0 rgba(40, 167, 69, .25)
 }
 
@@ -19855,6 +19857,9 @@ a.text-muted:hover {
 
 .link-black:focus, .link-black:hover {
     color: #e6e8ea
+}
+.price{
+    color:red;
 }
 
 /*# sourceMappingURL=adminlte.min.css.map */

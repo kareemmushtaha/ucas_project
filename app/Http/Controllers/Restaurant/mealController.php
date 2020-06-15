@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\model\meal;
 use App\model\category;
+use App\model\order;
 use App\Blogger;
+use App\User;
+use App\Hellper\Cart;
+use Cartalyst\Stripe\Laravel\Facades\Stripe;
+use mysql_xdevapi\Session;
 
 class mealController extends Controller
 {
@@ -186,4 +191,98 @@ class mealController extends Controller
         $meal->delete();
         return redirect('Restaurant/meal')->with('success', " Meal  (( $meal->name ))  was deleted successfully ");
     }
+
+
+    public function addToCart(meal $meal)
+    {
+        if (session()->has('cart')) {
+            $cart = new Cart(session()->get('cart'));
+        } else {
+            $cart = new Cart();
+        }
+        $cart->add($meal);
+//        dd($cart);
+        session()->put('cart', $cart);
+        return redirect()->back()->with('success', " add successfully");
+    }
+
+    public function showCart()
+    {
+        if (session()->has('cart')) {
+            $cart = new Cart(session()->get('cart'));
+        } else {
+            $cart = null;
+
+        }
+        return view('cart.ShowCart', compact('cart'));
+
+    }
+
+
+    public function checkout($amount)
+    {
+        return view('cart.checkout', compact('amount'));
+    }
+
+
+    public function charge(Request $request)
+    {
+//      dd($request->stripeToken);
+        $charge = stripe::charges()->create([
+            'currency' => 'USD',
+            'source' => $request->stripeToken,
+            'amount' => $request->amount,
+            'description' => 'Test form laravel  new app',
+        ]);
+        $chargeId = $charge['id'];
+
+        if ($chargeId) {
+            //1_save order in order table
+
+            auth()->user()->orders()->create([
+                'cart' => serialize(session()->get('cart')),
+            ]);
+
+            //2_clear session
+            session()->forget('cart');
+
+            return redirect('/')->with('success', "انتهت عملية الدفع بنجاح شكراً");
+        } else {
+            return redirect()->back();
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\model\meal  $meal
+     * @return \Illuminate\Http\Response
+     */
+
+    public function destroyCart(meal $meal)
+    {
+        $cart = new Cart( session()->get('cart'));
+        $cart->remove($meal->id);
+        if( $cart->totalQty <= 0 ) {
+            session()->forget('cart');
+        } else {
+            session()->put('cart', $cart);
+        }
+
+        return redirect()->route('cart.show')->with('success', 'تم ازاله المنتح بنجاح');
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

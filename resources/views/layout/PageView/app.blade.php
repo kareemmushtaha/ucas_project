@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('ShowUser/css/animate.min.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{ asset('ShowUser/css/main.css')}}">
+    @yield('style')
 </head>
 <body>
 
@@ -57,5 +58,10 @@
 <script src="{{ asset('ShowUser/js/isotope.pkgd.min.js')}}"></script>
 <script src="{{ asset('ShowUser/js/mail-script.js')}}"></script>
 <script src="{{ asset('ShowUser/js/main.js')}}"></script>
+
+@include('sweetalert::alert')
+
+@yield('script')
+
 </body>
 </html>

@@ -11,6 +11,8 @@ use App\model\servesResturent;
 use App\model\imgRestaurant;
 use App\model\meal;
 use App\model\addsRestaurant;
+use RealRashid\SweetAlert\Facades\Alert;
+
 class HomePageController extends Controller
 {
     /**
@@ -20,13 +22,14 @@ class HomePageController extends Controller
      */
     public function index()
     {
+        if (session('success')){
+            toast(session ('success'),'success');
 
+        }
         $data = TypeRestaurant::select('Type_Name')->get();
         $Restaurant = Blogger::select(['name', 'id', 'TypeOf_id', 'Description'])->paginate(10);
         $adds =addsRestaurant::latest()->take(8)->get();
         return view('homeView', compact('data', 'Restaurant','adds'));
-
-
     }
 
 
@@ -38,6 +41,7 @@ class HomePageController extends Controller
      */
     public function restaurant($id)
     {
+
         try {
             $Restaurant = Blogger::findOrFail($id);
             $serves = DB::table('bloggers')
@@ -50,13 +54,14 @@ class HomePageController extends Controller
                 ->join('adds_resturent', 'bloggers.id', '=', 'adds_resturent.Resturnt_id')
                 ->where('adds_resturent.Resturnt_id', '=', $id)
                 ->select('adds_resturent.*')
-                ->get();
+               ->paginate(12);
 
             $img = DB::table('bloggers')
                 ->join('imgresturent', 'bloggers.id', '=', 'imgresturent.Resturnt_id')
                 ->where('imgresturent.Resturnt_id', '=', $id)
                 ->select('imgresturent.*')
                 ->get();
+
 
             $category = DB::table('bloggers')
                 ->join('category', 'bloggers.id', '=', 'category.Resturnt_id')

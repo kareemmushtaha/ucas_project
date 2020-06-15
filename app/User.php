@@ -24,6 +24,16 @@ class User extends Authenticatable
 
     /*-------------------       End Many To Many Meal and User           ---------------------*/
 
+    public function orders()
+    {
+        return $this->hasMany('\App\model\order', 'user_id');
+    }
+
+
+
+
+
+
     protected $fillable = [
         'name', 'email', 'password',
     ];

@@ -1,14 +1,10 @@
 @extends('layout.PageView.app')
 @section('content')
 
-
     <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between">
-
                 <div class="col-lg-12 banner-content">
-
-
                     <h1 class="text-white" style="text-align: center;"> مطعم {{$Restaurant->name}} </h1>
                     <h5 class="text-white" style="text-align: center;"> لاشهى
                         المأكولات {{$Restaurant->TypeRestaurant->Type_Name}} </h5>
@@ -42,6 +38,32 @@
     </section>
     <!-- End home-about Area -->
 
+
+
+    <!--**************************** ERROR AND SUCCESS MESSAGE ********************************-->
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+        @if(session()->has('error'))
+            <div class="col-md-12">
+                <p class="alert alert-danger"> {{session()->get('error')}}</p>
+            </div>
+        @elseif(session()->has('success'))
+            <div class="col-md-12">
+                <div class="alert alert-success"> {{session()->get('success')}}</div>
+            </div>
+        @endif
+    </div>
+    <!--**************************** END ERROR AND SUCCESS MESSAGE ********************************-->
+
+
+
+
+
+
+
+
+
     <!-- Start menu-area Area -->
     <section class="menu-area section-gap" id="menu">
         <div class="container">
@@ -68,18 +90,21 @@
                         <div class="col-md-6 all  {{$meals->category_id}}">
                             <div class="single-menu">
                                 <div class="title-wrap d-flex justify-content-between">
-                                    <h4> {{$meals->name}} </h4>
-                                    <h4 class="price">{{$meals->category_id}}</h4>
+                                    <h4> وجبة :{{$meals->name}} </h4>
+                                    <h4 class="price"><i class="fa fa-ils price"> {{$meals->price}} </i>
+                                    </h4>
                                 </div>
-                                <p>
-                                    {{$meals->details}}
-                                </p>
+
                                 @if($meals->img !="NULL")
                                     <img src="{{ asset('/imgresturent/'.$meals->img) }}" width="100px" height="100px">
-
+                                    <i> تفاصيل الوجبة : {{$meals->details }}</i>
                                 @else
                                     <img class="imgMeal" src="{{asset('/images/defult.jpeg')}}">
+                                    <i> تفاصيل الوجبة : {{$meals->details }}</i>
                                 @endif
+                                <button style="margin-right: 10% !important;margin-top: 15% !important; "
+                                        class="primary-btn"><i class="fa fa-shopping-cart"><a
+                                            href="{{route('cart.add',$meals->id)}}">شراء</a></i></button>
                             </div>
                         </div>
                     @endforeach
@@ -87,12 +112,7 @@
             </div>
         </div>
     </section>
-    <!-- End menu-area Area -->
 
-
-
-
-    <!-- Start blog Area -->
     <section class="blog-area section-gap" id="blog">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -103,36 +123,45 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
+
+                {{--                 Test session How Meals Inside--}}
+                {{--               {{print_r(session()->get('cart'))}}--}}
+                {{--                End Test session How Meals Inside --}}
+
+
                 @foreach($Adds as $offer)
-                    <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-                        <div class="thumb">
-                            <img class="img-fluid" src="{{ asset('/imgresturent/'.$offer->img)}}" alt="">
+                    <div class="col-lg-4 col-md-6 col-sm-6 single-blog">
+                        <div class="thumb" style="margin-top: 10%;">
+                            @if($offer->img !='NULL')
+                                <a href="/detailsAdd/{{$offer->id}}/">
+                                    <img class="img-fluid" src="{{ asset('/imgresturent/'.$offer->img)}}"
+                                         style="height: 250px !important; width: 250px !important;" alt="">
+                                </a>
+                            @else
+                                <img class="img-fluid" src="{{ asset('/images/defult.jpeg')}}"
+                                     style="height: 250px !important; width: 250px !important;" alt="">
+                            @endif
+
                         </div>
-                        <p class="date">تاريخ نهاية العرض {{$offer->finish_add}}</p>
-                        {{--                        <a href="blog-single.html"><h4>اسم العرض</h4></a>--}}
+                        <P><a href="/detailsAdd/{{$offer->id}}/"> رؤية تفاصيل العرض :</a></P>
                         <p>
                             {{$offer->details}}
                         </p>
-                        <div class="meta-bottom d-flex justify-content-between">
-                            <p><span class="lnr lnr-heart"></span> 30 اعجاب</p>
-                        </div>
+                        <p class="date" style="max-width: 250px;">تاريخ نهاية العرض {{$offer->finish_add}}</p>
                     </div>
                 @endforeach
-
             </div>
+            {{$Adds->links()}}
         </div>
     </section>
-
-
-
 
     <div class="section-top-border">
         <h3>معرض صور المطعم</h3>
         <div class="row gallery-item">
             @foreach($img as $photo)
                 <div class="col-md-4">
-
                     @if($photo->img!="NULL")
                         <a href="{{ asset('/imgresturent/'.$photo->img)}}" class="img-gal">
                             <div class="single-gallery-image"
@@ -149,7 +178,6 @@
         </div>
     </div>
 
-
     <section class="blog-area section-gap" id="blog" style="background-color: rgba(0,12,25,0.82);padding: 7% 7%;">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -160,17 +188,13 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="row">
-
                 @foreach($serves as $data)
                     <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
                         <a href="blog-single.html"><h4 style="margin-top: 40px;color: white;"><i
                                     class="fa fa-check"></i>{{$data->serves_name}} </h4></a>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </section>

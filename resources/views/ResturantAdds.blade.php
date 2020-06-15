@@ -27,46 +27,36 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-service">
-                        <div class="thumb">
-                            <img src="{{asset('/images/defult.jpeg')}}" alt="">
+
+                @foreach($adds as $add)
+                    <div class="col-lg-4">
+                        <div class="single-service">
+                            <div class="thumb">
+                                @if($add->img != "NULL")
+                                    <img src="{{ asset('/imgresturent/'.$add->img)}}"
+                                         style="height: 250px !important; width: 250px !important;" alt="">
+                                @else
+                                    <img src="{{asset('/images/defult.jpeg')}}"
+                                         style="height: 250px !important; width: 250px !important;" alt="">
+
+                                @endif
+                            </div>
+
+                            <a href="/restaurant/{{ $add->Resturnt_id }}/">
+                                <h4>{{$add->getRestaurantByAdd->name}} </h4>
+                            </a>
+                            <p>
+                                {{$add->details}}
+                            </p>
                         </div>
-                        <a href="#">
-                            <h4>عرض عيد الفطر السعيد </h4>
-                        </a>
-                        <p>
-                            وجبة الهت بيتزا الشهية نقدمها 8 قطع وسلطة الكراش الحارة نقدمها بعرض جديد </p>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service">
-                        <div class="thumb">
-                            <img src="{{asset('/images/defult.jpeg')}}" alt="">
-                        </div>
-                        <a href="#">
-                            <h4>عرض عيد الفطر السعيد</h4>
-                        </a>
-                        <p>
-                            وجبة الهت بيتزا الشهية نقدمها 8 قطع وسلطة الكراش الحارة نقدمها بعرض جديد </p>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service">
-                        <div class="thumb">
-                            <img src="{{asset('/images/defult.jpeg')}}" alt="">
-                        </div>
-                        <a href="#">
-                            <h4>عرض عيد الفطر السعيد</h4>
-                        </a>
-                        <p>
-                            وجبة الهت بيتزا الشهية نقدمها 8 قطع وسلطة الكراش الحارة نقدمها بعرض جديد </p>
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
         </div>
+        </div>
+        {{ $adds->links() }}
+
     </section>
 
 

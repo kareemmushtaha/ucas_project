@@ -139,31 +139,25 @@
             </div>
             <div class="row">
                 @foreach($adds as $add)
-                <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-                    <div class="thumb">
-
-                        @if($add->img!="NULL")
-                            <td><img class="img-fluid" src="{{ asset('/imgresturent/'.$add->img) }}" style="height: 250px !important; width: 250px !important;" alt="">
-                            </td>
-                        @else
-                            <td><img class="img-fluid" src="{{ asset('ShowUser/img/b1.jpg') }}" alt=""></td>
-                        @endif
-
-
-
-
-
-
+                    <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
+                        <div class="thumb">
+                            @if($add->img!="NULL")
+                                <a href="/detailsAdd/{{$add->id}}/">
+                                <img href="" class="img-fluid" src="{{ asset('/imgresturent/'.$add->img) }}"
+                                         style="height: 250px !important; width: 250px !important;" alt="">
+                                </a>
+                            @else
+                                <td><img class="img-fluid" src="{{ asset('ShowUser/img/b1.jpg') }}" alt=""></td>
+                            @endif
+                        </div>
+                        <a href="/restaurant/{{ $add->Resturnt_id }}/"><h4>
+                                {{$add->getRestaurantByAdd->name}}
+                            </h4></a>
+                        <p>
+                            {{$add->details}}
+                        </p>
+                        <p class="date">{{$add->finish_add}}</p>
                     </div>
-                    <a href="blog-single.html"><h4>
-                            {{$add->getRestaurantByAdd->name}}
-                        </h4></a>
-                    <p>
-                        {{$add->details}}
-                       </p>
-                    <p class="date">{{$add->finish_add}}</p>
-
-                </div>
                 @endforeach
             </div>
         </div>
