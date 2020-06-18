@@ -29,10 +29,7 @@ class servesController extends Controller
      */
     public function create()
     {
-
-        $data = Blogger::all();/* !! ملهاش لازمة */
-
-        return view('dashboard.Restaurant.img.create', compact('data'));
+        return view('dashboard.Restaurant.serves.create');
 
     }
 
@@ -116,6 +113,7 @@ class servesController extends Controller
             'serves_name' => $request->serves_name,
             'Resturnt_id' => $request->Resturnt_id,
         ];
+
         servesResturent::where('id', $id)->update($data);
         return redirect('Restaurant/serves')->with('success', "Update (($request->serves_name)) Successfully");
 

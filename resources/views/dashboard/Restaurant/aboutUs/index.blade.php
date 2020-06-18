@@ -88,10 +88,82 @@
                     </tbody>
                 </table>
             </div>
-        </div>
 
+        </div>
 
     </div>
     <div>
     </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body table-responsive p-0">
+                <div class="card-header">
+                    <h3 class="card-title">update type Restaurant </h3>
+                </div>
+                <form method="post" action="{{ Route('type.update', auth('blogger')->user()->id)}}">
+                    @csrf
+                    @method('PUT')
+                    <select class="browser-default custom-select" name="typeof">
+                        @foreach($typeOf as $row)
+                            <option value="{{$row->id}}" selected>{{$row->Type_Name}}</option>
+                        @endforeach
+                    </select>
+
+                    <button class="btn btn-success mt-4" type="submit"><i class="fa fa-edit">
+                            Update Type of </i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body table-responsive p-0">
+                <div class="card-header">
+                    <h3 class="card-title">update Logo Restaurant </h3>
+                </div>
+                <form method="post" action="{{ Route('logo.update', auth('blogger')->user()->id)}}"
+                      enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+
+                    <label for="img">Choose Photo Ads</label>
+                    <div class="form-group">
+                        <div>
+                            @foreach($restaurant as $logo)
+                                @if($logo->img !="null")
+                                    <img src="{{  asset('/imgresturent/'.$logo->img)}}" width="100px"
+                                         height="100px">
+                                @else
+                                    <img src="{{ asset('/images/defult.jpeg') }}" width="100px" height="100px">
+                                @endif
+                            @endforeach
+                        </div>
+
+                    </div>
+                    <div class="btn btn-primary btn-sm float-left">
+                        <input type="file" name="img" id="img" style="margin-left:10%; ">
+                    </div>
+
+                    <span style="color: red;">{{$errors->first('img')}} </span>
+                    <button class="btn btn-success" style="margin-left: 1%;" type="submit"><i class="fa fa-edit">
+                            Save Update Logo </i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 @endsection

@@ -22,14 +22,15 @@ class HomePageController extends Controller
      */
     public function index()
     {
-        if (session('success')){
-            toast(session ('success'),'success');
-
+        if (session('success')) {
+            toast(session('success'), 'success');
         }
+
         $data = TypeRestaurant::select('Type_Name')->get();
-        $Restaurant = Blogger::select(['name', 'id', 'TypeOf_id', 'Description'])->paginate(10);
-        $adds =addsRestaurant::latest()->take(8)->get();
-        return view('homeView', compact('data', 'Restaurant','adds'));
+        $Restaurant = Blogger::select(['name', 'id', 'TypeOf_id', 'Description','img'])->paginate(10);
+        $adds = addsRestaurant::latest()->take(8)->get();
+        return view('homeView', compact('data', 'Restaurant', 'adds'));
+
     }
 
 
@@ -41,7 +42,6 @@ class HomePageController extends Controller
      */
     public function restaurant($id)
     {
-
         try {
             $Restaurant = Blogger::findOrFail($id);
             $serves = DB::table('bloggers')
@@ -54,7 +54,14 @@ class HomePageController extends Controller
                 ->join('adds_resturent', 'bloggers.id', '=', 'adds_resturent.Resturnt_id')
                 ->where('adds_resturent.Resturnt_id', '=', $id)
                 ->select('adds_resturent.*')
-               ->paginate(12);
+                ->paginate(12);
+
+            $aboutUs = DB::table('bloggers')
+                ->join('aboutus_resturent', 'bloggers.id', '=', 'aboutus_resturent.Resturnt_id')
+                ->where('aboutus_resturent.Resturnt_id', '=', $id)
+                ->select('aboutus_resturent.*')
+                ->get();
+
 
             $img = DB::table('bloggers')
                 ->join('imgresturent', 'bloggers.id', '=', 'imgresturent.Resturnt_id')
@@ -62,13 +69,11 @@ class HomePageController extends Controller
                 ->select('imgresturent.*')
                 ->get();
 
-
             $category = DB::table('bloggers')
                 ->join('category', 'bloggers.id', '=', 'category.Resturnt_id')
                 ->where('category.Resturnt_id', '=', $id)
                 ->select('category.*')
                 ->get();
-
 
 //            $meal = DB::table('bloggers')
 //                ->join('meal_resturent', 'bloggers.id', '=', 'meal_resturent.Resturnt_id')
@@ -81,7 +86,7 @@ class HomePageController extends Controller
                 ->where('Resturnt_id', $id)
                 ->get();
 
-            return view("RestaurantView", compact('Restaurant', 'serves', 'Adds', 'img', 'category', 'meal'));
+            return view("RestaurantView", compact('Restaurant', 'serves', 'aboutUs', 'Adds', 'img', 'category', 'meal'));
         } catch (ModelNotFoundException $exception) {
             return redirect()->route('/')->with('error', 'Restaurant not found');
         }

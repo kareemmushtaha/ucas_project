@@ -255,17 +255,18 @@ class mealController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\meal  $meal
+     * @param \App\model\meal $meal
      * @return \Illuminate\Http\Response
      */
 
     public function destroyCart(meal $meal)
     {
-        $cart = new Cart( session()->get('cart'));
+        $cart = new Cart(session()->get('cart'));
         $cart->remove($meal->id);
-        if( $cart->totalQty <= 0 ) {
+        if ($cart->totalQty <= 0) {
             session()->forget('cart');
         } else {
+            //save in session
             session()->put('cart', $cart);
         }
 
@@ -273,16 +274,33 @@ class mealController extends Controller
 
     }
 
+    private function rules2()
+    {
+        return [
+            'qty' => 'required|numeric',
+        ];
+    }
+
+    private function massages2()
+    {
+        return [
+            'qty.required' => 'يجب ملئ حقل الكمية لايمكنك تركه فارغاً ',
+            'qty.numeric' => 'يجب ان يحتوي الحقل على رقم فقط لايمكن ان يحتوي على حروف',
+        ];
+    }
 
 
+    public function updateQtyAndPriceOrder(Request $request, meal $meal)
+    {
+        $request->validate($this->rules2(), $this->massages2());
 
+        $cart = new Cart(session()->get('cart'));
+        $cart->updateQty($meal->id, $request->qty);
+        //save in session
+        session()->put('cart', $cart);
+        return redirect()->route('cart.show')->with('success', 'update quantity meal successfully');
 
-
-
-
-
-
-
+    }
 
 
 }

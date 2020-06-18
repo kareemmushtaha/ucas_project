@@ -15,22 +15,32 @@
         </div>
     </section>
 
-
-
-    <div class="container" style="padding-top: 3%;">
+    <div class="container" style="padding-top: 3%; ">
         <div class="row">
             @if($cart)
+                <div class="col-md-8">
+                    @if($errors->any())
+                        <div class="alert alert_danger" style="background-color: #ff0000;padding: 4% 4%;">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li style="color: wheat;font-weight: bolder;"> {{$error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table product-table">
-                                <thead class="mdb-color lighten-5">
+                                <thead class="mdb-color ">
                                 <tr>
                                     <th class="font-weight-bold">
                                         <strong>صورة الوجبة </strong>
                                     </th>
                                     <th class="font-weight-bold">
-                                        <strong>اسم الوجبة </strong>
+                                        <strong style="padding-right: 20px;"> الوجبة </strong>
                                     </th>
                                     <th class="font-weight-bold">
                                         <strong>السعر</strong>
@@ -42,9 +52,15 @@
                                         <strong>الكمية</strong>
                                     </th>
                                     <th class="font-weight-bold">
+                                        <strong>تعديل الكمية</strong>
+                                    </th>
+                                    <th class="font-weight-bold">
                                         <strong>المجموع</strong>
                                     </th>
-                                    <th></th>
+                                    <th class="font-weight-bold">
+                                        <strong>ازالة الوجبة </strong>
+                                    </th>
+
                                 </tr>
                                 </thead>
 
@@ -61,7 +77,10 @@
                                         <P>الكمية : {{$cart->totalQty}}</P>
                                     </div>
                                     <div class="col-md-2">
-                                        <a href="{{ route('cart.checkout',$cart->totalPrice)}}" class="btn btn-info">Checkout</a>
+
+                                        <a href="{{ route('cart.checkout',$cart->totalPrice)}}"
+                                           class="btn btn-success">ادفع
+                                            الآن</a>
                                     </div>
                                 </div>
 
@@ -74,28 +93,38 @@
                                                  alt="" class="img-fluid z-depth-0">
                                         </td>
                                         <td>
-                                            <h5 class="mt-3">
+                                            <h5>
                                                 <strong style="padding-right: 20px;">{{$meal['name']}}</strong>
                                             </h5>
                                         </td>
-
-                                        <td></td>
-                                        <td>{{$meal['price']}}</td>
+                                        <td>${{$meal['price']}}</td>
                                         <td>{{$meal['Resturnt_id']}}</td>
-                                        <td>
-                                            <input type="number" value="{{$meal['qty']}}" aria-label="Search"
-                                                   class="form-control" style="width: 100px">
-                                        </td>
+
+                                        <form action="{{route('meal.update',$meal['id'])}}" method="post">
+                                            <td>
+                                                @csrf
+                                                @method('put')
+                                                <input type="text" name="qty" id="qty" value="{{$meal['qty']}}"
+                                                       aria-label="Search"
+                                                       class="form-control" style="width: 100px">
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-sm btn-primary"> تعديل الكمية
+                                                </button>
+                                            </td>
+                                        </form>
+
+
                                         <td class="font-weight-bold">
-                                            <strong>$1200</strong>
+                                            <strong style="margin-right:1%;">{{$meal['qty']*$meal['price']}} $</strong>
                                         </td>
                                         <td>
                                             <form action="{{ route('meal.remove',$meal['id'] )}}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="submit" class="btn btn-sm btn-primary"
+                                                <button type="submit" class="btn btn-sm btn-danger"
                                                         data-toggle="tooltip"
-                                                        data-placement="top" title="Remove item">X
+                                                        data-placement="top" title="Remove item"> إلغاء الطلب
                                                 </button>
                                             </form>
                                         </td>
@@ -103,7 +132,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            <p><strong> Total : {{$cart->totalPrice}}</strong></p>
+                            <p><strong> المجموع الكلي : {{$cart->totalPrice}} $</strong></p>
                         </div>
                     </div>
                 </div>

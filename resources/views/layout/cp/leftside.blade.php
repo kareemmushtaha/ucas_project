@@ -6,7 +6,7 @@
         <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
-    <!-- Sidebar -->
+   
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -21,15 +21,14 @@
         <div>
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
-                <i class="icon-signout" style="color: white;"></i>
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
         </div>
-        <!-- Sidebar Menu -->
+
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
@@ -92,5 +91,8 @@
                             </a>
                         </li>
                     </ul>
-
+                </li>
+            </ul>
+        </nav>
+    </div>
 </aside>

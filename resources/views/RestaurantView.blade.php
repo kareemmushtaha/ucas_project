@@ -12,33 +12,69 @@
             </div>
         </div>
     </section>
-    <!-- End banner Area -->
 
-    <!-- Start home-about Area -->
+
     <section class="home-about-area section-gap">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 home-about-left">
-                    <h3>عن مطعم {{$Restaurant->name}} </h3>
+                    <h2>عن مطعم {{$Restaurant->name}} </h2>
                     <p class="About-Us">
                         نوع المطعم : {{$Restaurant->TypeRestaurant->Type_Name}}
                     </p>
-                    <p class="About-Us">
-                        نبذه عن الموقع : {{$Restaurant->Description}}
-
+                    <p class="About-Us" style="">
+                        نبذه عن الموقع : @foreach($aboutUs as $about)
+                            {{$about->aboutUs}}
+                        @endforeach
                     </p>
-                    <a href="#" class="primary-btn"> رؤية المزيد</a>
+
+
+                    <div class="row" >
+
+                        @foreach($aboutUs as $about)
+                            <div class="col-md-6">
+                                <p class="About-Us">
+                                    <i class="fa fa-mobile"></i>
+                                    جوال 1 :
+                                    {{$about->phone1}}
+                                </p>
+                            </div>
+
+                            <div class="col-md-6">
+                                <p class="About-Us">
+                                    <i class="fa fa-phone"></i>
+                                    تلفون :
+                                    {{$about->telephon}}
+
+                                </p>
+                            </div>
+
+                            <div class="col-md-10">
+                                <p class="About-Us">
+                                    <i class="fa fa-road" aria-hidden="true"></i>
+                                    العنوان  :
+                                    {{$about->adress}}
+
+                                </p>
+                            </div>
+                        @endforeach
+                    </div>
+
+
                 </div>
                 <div class="col-lg-6 home-about-right">
-                    <img class="img-fluid" src="{{ asset('ShowUser/img/about-img.jpg')}}" alt="">
 
+                    @if($Restaurant->img !=='null')
+                        <img class="img-fluid" src="{{ asset('imgresturent/'.$Restaurant->img)}}"
+                             style="width:400px !important;height:300px !important;margin-right: 20%;" alt="">
+
+                    @else
+                        <img class="img-fluid" src="{{ asset('ShowUser/img/about-img.jpg')}}" alt="">
+                    @endif
                 </div>
             </div>
         </div>
     </section>
-    <!-- End home-about Area -->
-
-
 
     <!--**************************** ERROR AND SUCCESS MESSAGE ********************************-->
     <div class="row">
@@ -57,14 +93,6 @@
     <!--**************************** END ERROR AND SUCCESS MESSAGE ********************************-->
 
 
-
-
-
-
-
-
-
-    <!-- Start menu-area Area -->
     <section class="menu-area section-gap" id="menu">
         <div class="container">
             <div class="row d-flex justify-content-center">

@@ -58,4 +58,19 @@ class Cart
         }
     }
 
+    public function updateQty($id, $qty)
+    {
+        //reset (remove)  qty and price in the cart
+        $this->totalQty -= $this->items [$id]['qty'];
+        $this->totalPrice -= $this->items [$id]['price'] * $this->items[$id]['qty'];
+
+        // add the  the new quantity in cart
+        $this->items[$id]['qty'] = $qty;
+
+        //add the new totalPrice in cart
+        $this->totalQty += $qty;
+        $this->totalPrice += $this->items [$id]['price'] * $qty;
+    }
+
+
 }

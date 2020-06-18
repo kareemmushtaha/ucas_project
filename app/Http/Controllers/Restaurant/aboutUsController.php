@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\model\aboutusResturent;
 use App\Blogger;
+use \App\model\TypeRestaurant;
 use Illuminate\Support\Facades\DB;
 
 class aboutUsController extends Controller
@@ -21,8 +22,10 @@ class aboutUsController extends Controller
         $blogger = auth('blogger')->user()->id;
         //---------------------       Restaurant id in model aboutRestaurant == $blogger
         $aboutUs = \App\model\aboutusResturent::where('Resturnt_id', $blogger)->get();
-        return view('dashboard.Restaurant.aboutUs.index', compact('aboutUs'));
 
+        $typeOf = TypeRestaurant::get();
+        $restaurant = Blogger::get();
+        return view('dashboard.Restaurant.aboutUs.index', compact('aboutUs', 'typeOf', 'restaurant'));
 
     }
 
@@ -109,9 +112,9 @@ class aboutUsController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-    *
+     *
      * @param int $id
-    * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
@@ -150,6 +153,33 @@ class aboutUsController extends Controller
 //        return redirect('Restaurant/aboutUs')->with('success', "Update About Us Information Successfully (( $nameRestaurant )) ");
 //    }
 
+
+    public function updateType(Request $request, $id)
+    {
+        $data = [
+            'TypeOf_id' => $request->typeof,
+        ];
+
+        Blogger::select('TypeOf_id')->where('id', $id)->update($data);
+        return redirect('Restaurant/aboutUs')->with('success', "Update Type Successfully");
+    }
+
+    public function updateLogo(Request $request, $id)
+    {
+        $files = $request->file('img');
+        if ($files) {
+            $destinationPath = public_path() . "/imgresturent/";
+            $imgfile = date('YmdHis') . "." . $files->getClientOriginalExtension();
+            $files->move($destinationPath, $imgfile);
+        } else {
+            $imgfile = "NULL";
+        }
+        $data = [
+            'img' => $request = $imgfile,
+        ];
+        Blogger::select('img')->where('id', $id)->update($data);
+        return redirect('Restaurant/aboutUs')->with('success', "Update Logo Successfully");
+    }
 
     /**
      * Remove the specified resource from storage.

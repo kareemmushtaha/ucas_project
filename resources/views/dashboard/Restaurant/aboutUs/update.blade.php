@@ -10,7 +10,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form method="post" action="{{ Route('aboutUs.update',$data->id)}}">
+            <form method="post" action="{{ Route('aboutUs.update',$data->id)}}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="card-body">
@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label for="aboutUs"> Adress Restaurant </label>
                         <input type="text" class="form-control" value="{{ $data->adress }}"
-                                  name="adress" placeholder="Enter serves Details">
+                               name="adress" placeholder="Enter serves Details">
                         <span style="color: red;">{{$errors->first('adress')}} </span>
                     </div>
 
@@ -41,14 +41,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="aboutUs"> phone 2  Restaurant </label>
+                        <label for="aboutUs"> phone 2 Restaurant </label>
                         <input type="number" class="form-control" value="{{ $data->phone2 }}"
                                name="phone2" placeholder="Enter second phone Restaurant ">
                         <span style="color: red;">{{$errors->first('phone2')}} </span>
                     </div>
 
                     <div class="form-group">
-                        <label for="telephon"> telephon   Restaurant </label>
+                        <label for="telephon"> telephon Restaurant </label>
                         <input type="number" class="form-control" value="{{ $data->telephon }}"
                                name="telephon" placeholder="Enter second Telephone Restaurant ">
                         <span style="color: red;">{{$errors->first('telephon')}} </span>

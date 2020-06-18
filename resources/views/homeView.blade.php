@@ -1,27 +1,20 @@
 @extends('layout.PageView.app')
 @section('content')
-    <!-- start banner Area -->
 
+    <!-- start banner Area -->
     <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between">
-
                 <div class="col-lg-12 banner-content">
 
-                    <h6 class="text-white">Wide Options of Choice</h6>
-                    <h1 class="text-white" style="text-align: center;"> مطااعم غزة</h1>
-                    <h6 class="text-white" style="text-align: center;">
-                        منصة مطاعم تشمل جميع المطاعم بكل انواعها مطاعم, فلسطينية, شرقية غربية ,شعبية, مقاهي , شاورما
-                        .
+                    <h1 class="text-white" style="text-align: center;"> أهلاً وسهلا بكم في منصة Gaza Food</h1>
+                    <h6 class="text-white" style="text-align: center;background-color: rgba(255,0,0,0.75);padding-bottom:1%;padding-top: 1%; ">
+                        منصة تشمل جميع المطاعم بكل انواعها , فلسطينية, شرقية غربية ,شعبية, مقاهي , شاورما
                     </h6>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- End banner Area -->
-
-    <!-- Start home-about Area -->
     <section class="home-about-area section-gap">
         <div class="container">
             <div class="row align-items-center">
@@ -31,18 +24,16 @@
                         موقعنا عبارة عن منصة لجميع مطاعم غزة بكل انواعها شرقية وغربية وشعبية وشاورما وبيتزا ومقاهى
                         حيث انه نتيح للمطعم اليةادارة مطعمه بشكل احترافي وايضا نوفر للمستخدم رؤية جميع منتجات المطاعم
                         والعروض المقدمة من قبل المطاعم مع امكانية شراء المنتجات الكترونيا. </p>
-                    <a href="#" class="primary-btn"> رؤية المزيد</a>
+                    <a href="/aboutUs/gaza/food" class="primary-btn"> رؤية المزيد</a>
                 </div>
                 <div class="col-lg-6 home-about-right">
-                    <img class="img-fluid" src="{{ asset('ShowUser/img/about-img.jpg')}}" alt="">
-
+                    <img class="img-fluid" src="{{ asset('ShowUser/img/logo2.png')}}"
+                         style="height: 100%;width: 100%;margin-right:1%;">
                 </div>
             </div>
         </div>
     </section>
-    <!-- End home-about Area -->
 
-    <!-- Start menu-area Area -->
     <section class="menu-area section-gap" id="menu">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -60,7 +51,6 @@
                     <li class="{{$type->Type_Name}}" data-filter=".{{$type->Type_Name}}"> {{$type->Type_Name}} </li>
                 @endforeach
             </ul>
-
             <div class="filters-content">
                 <div class="row grid">
                     @foreach($Restaurant as $rest)
@@ -80,49 +70,7 @@
                         </div>
                     @endforeach
                 </div>
-
                 {{ $Restaurant->links() }}
-
-            </div>
-        </div>
-    </section>
-    <!-- End menu-area Area -->
-
-    <!-- Start reservation Area -->
-    <section class="reservation-area section-gap relative">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6 reservation-left">
-                    <h1 class="text-white"> ان كان هناك اي تعليق فعليك تعبئه هذا النموذج
-                    </h1>
-                    <p class="text-white pt-20">
-                        قسم الادارة والمتابعة
-                    </p>
-                </div>
-                <div class="col-lg-5 reservation-right">
-                    <form class="form-wrap text-center" action="#">
-                        <input type="text" class="form-control" name="name" placeholder="Your Name"
-                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email Address"
-                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
-                        <input type="text" class="form-control" name="phone" placeholder="Phone Number"
-                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
-                        <input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time"
-                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'">
-                        <div class="form-select" id="service-select">
-                            <select>
-                                <option data-display="">Select Event</option>
-                                <option value="1">Event One</option>
-                                <option value="2">Event Two</option>
-                                <option value="3">Event Three</option>
-                                <option value="4">Event Four</option>
-                            </select>
-                        </div>
-                        <button class="primary-btn text-uppercase mt-20">Make Reservation</button>
-
-                    </form>
-                </div>
             </div>
         </div>
     </section>
@@ -143,7 +91,7 @@
                         <div class="thumb">
                             @if($add->img!="NULL")
                                 <a href="/detailsAdd/{{$add->id}}/">
-                                <img href="" class="img-fluid" src="{{ asset('/imgresturent/'.$add->img) }}"
+                                    <img href="" class="img-fluid" src="{{ asset('/imgresturent/'.$add->img) }}"
                                          style="height: 250px !important; width: 250px !important;" alt="">
                                 </a>
                             @else
@@ -162,7 +110,4 @@
             </div>
         </div>
     </section>
-    <!-- End blog Area -->
-
-
 @endsection

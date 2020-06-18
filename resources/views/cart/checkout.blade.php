@@ -4,45 +4,41 @@
     <style>
 
 
-    .StripeElement {
-    box-sizing: border-box;
+        .StripeElement {
+            box-sizing: border-box;
 
-    height: 40px;
+            height: 40px;
 
-    padding: 10px 12px;
+            padding: 10px 12px;
 
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: white;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: white;
 
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-    }
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
 
-    .StripeElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    }
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
 
-    .StripeElement--invalid {
-    border-color: #fa755a;
-    }
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
 
-    .StripeElement--webkit-autofill {
-    background-color: #fefde5 !important;
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
     </style>
 @endsection
 @section('content')
-
-
-
-
 
     <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between">
                 <div class="col-lg-12 banner-content">
-                    <h1 class="text-white" style="text-align: center;"> قسم سلة المنتجات </h1>
+                    <h1 class="text-white" style="text-align: center;"> قسم الدفع الإلكتروني  </h1>
                     <h5 class="text-white" style="text-align: center;"> بالأسفل
                     </h5>
                 </div>
@@ -54,8 +50,9 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="mb-4">
-                    <p style="padding: 10% 10%;">
-                        السعر النهائي : {{$amount}}$
+                    <p style="padding: 2% 2%;color: #ffffff;background-color: #8b0000;margin-top: 3%;border-radius: 8px 8px;">
+                        المجموع الكلي :{{$amount}}$
+
                     </p>
 
                     <form action="/charge" method="post" id="payment-form">
@@ -63,9 +60,9 @@
                         <div class="">
                             <input type="hidden" name="amount" value="{{$amount}}">
                             <label for="card-element">
-                                Credit or debit card
+                                الدفع الإلكتروني
                             </label>
-                            <div id="card-element">
+                            <div id="card-element" style="background-color: #262626;padding: 6% 4%;">
                                 <!-- A Stripe Element will be inserted here. -->
                             </div>
 
@@ -73,10 +70,9 @@
                             <div id="card-errors" role="alert"></div>
                         </div>
 
-                        <button class="btn btn-primary mt-3">Submit Payment</button>
-                        <p id="loading" style="display: none;"> تتم عملية الدفع  الان انتظر قليلا .....</p>
+                        <button class="btn btn-success mt-3"> ادفع الآن </button>
+                        <p id="loading" style="display: none;"> تتم عملية الدفع الان انتظر قليلا .....</p>
                     </form>
-
 
 
                 </div>
@@ -88,8 +84,8 @@
 
 @section('script')
     <script src="https://js.stripe.com/v3/"></script>
-<script>
-        window.onload =function() {
+    <script>
+        window.onload = function () {
             var stripe = Stripe('pk_test_51GtKCUClUwoWxnDDMLssne8DLO0lsAhYZrGlvN1ldhSofzauJxdjXjJKErwsbiDwhl0w3UmOjT3PkZXpbJS5pNNF006F5RyV9Z');
             var elements = stripe.elements();
             var style = {
@@ -149,10 +145,10 @@
 
                 // Submit the form
                 var loading = document.getElementById('loading')
-                loading.style.display="block";
+                loading.style.display = "block";
                 form.submit();
 
             }
         }
-</script>
+    </script>
 @endsection

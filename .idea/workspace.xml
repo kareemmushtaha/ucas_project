@@ -2,26 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ddf4d5-f872-4826-9ac9-2f3fc7117472" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/cart/ShowCart.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/aboutUs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/ChoseUserAuth.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/showAllRestaurant.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Hellper/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Hellper/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/aboutUsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/aboutUsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/mealController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/mealController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Restaurant/servesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Show/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Show/HomePageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_11_002345_create_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_11_002345_create_order_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/adminlte.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminlte.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/RestaurantView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/RestaurantView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ResturantAdds.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ResturantAdds.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/ShowCart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/ShowCart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/aboutUs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/aboutUs/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/aboutUs/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/Restaurant/aboutUs/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/homeView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homeView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/PageView/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/PageView/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/PageView/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/PageView/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp/leftside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/cp_restaurant/leftside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/auth.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,6 +299,7 @@
       <workItem from="1591748931880" duration="11115000" />
       <workItem from="1591900753105" duration="42513000" />
       <workItem from="1592093233532" duration="23844000" />
+      <workItem from="1592256209982" duration="48209000" />
     </task>
     <servers />
   </component>
@@ -317,26 +323,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584568310259" />
-    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl" timestamp="1591869622140">
+    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl" timestamp="1592273203878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591869622140" />
-    <state x="474" y="179" key="NewPhpClassDialog" timestamp="1583714810371">
+    <state x="462" y="107" width="494" height="517" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592273203878" />
+    <state x="474" y="142" key="NewPhpClassDialog" timestamp="1592355145394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1583714810371" />
-    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1592105391669">
+    <state x="474" y="142" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1592355145394" />
+    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1592440967538">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1592105391669" />
+    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1592440967538" />
     <state x="466" y="81" key="RollbackChangesDialog" timestamp="1584832932047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="81" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584832932047" />
-    <state x="162" y="0" key="SettingsEditor" timestamp="1591910165963">
+    <state x="162" y="0" key="SettingsEditor" timestamp="1592363120209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591910165963" />
+    <state x="162" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592363120209" />
     <state width="505" height="450" key="SwitcherDM" timestamp="1586392715001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -353,21 +359,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="209" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1583840523995" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1592105901360">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1592273172742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592105901360" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592095491194">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592273172742" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592378773304">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592095491194" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592378773304" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/RestaurantView.blade.php</url>
-          <line>151</line>
+          <line>179</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

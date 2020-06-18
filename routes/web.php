@@ -16,7 +16,6 @@
 //});
 
 Route::get('/', 'Show\HomePageController@index');
-Route::get('/restaurant/{id}', 'Show\HomePageController@restaurant');
 
 Route::get('/kks', function () {
     return view('RestaurantView');
@@ -31,14 +30,11 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'register'], function () {
 });
 
 Route::group(['namespace' => 'Auth', 'prefix' => 'login'], function () {
-
     Route::get('/admin', 'LoginController@showAdminLoginForm');
     Route::get('/blogger', 'LoginController@showBloggerLoginForm');
     Route::post('/admin', 'LoginController@adminLogin');
     Route::post('/blogger', 'LoginController@bloggerLogin');
 });
-
-
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -47,10 +43,9 @@ Route::view('/home', 'home')->middleware('auth');
 Route::view('/admin', 'admin')->middleware('auth:admin');
 Route::view('/blogger', 'blogger')->middleware('auth:blogger');
 
-
 /*------------------------    Finish Route Login and Register   --------------------------*/
 
-Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
+Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function () {
     Route::Resource('userAdmin', 'userResturentController');
     Route::Resource('servesAllRestaurant', 'servesResturentController');
     Route::Resource('categoryAllRestaurant', 'categoryResturentController');
@@ -62,18 +57,46 @@ Route::group(['namespace' => 'Admin', 'middleware'=>'auth:admin'], function () {
 
 });
 
-Route::group(['prefix'=>'Restaurant' ,'namespace' => 'Restaurant', 'middleware'=>'auth:blogger'], function () {
+Route::group(['prefix' => 'Restaurant', 'namespace' => 'Restaurant', 'middleware' => 'auth:blogger'], function () {
     Route::Resource('/category', 'showCategorysController');
     Route::post('/searchuser', 'showCategorysController@search');
     Route::Resource('/serves', 'servesController');
     Route::Resource('/img', 'imgController');
     Route::Resource('/Ads', 'adsController');
+    Route::put('/typeOf/{id}', 'aboutUsController@updateType')->name('type.update');
+    Route::put('/logo/update/{id}', 'aboutUsController@updateLogo')->name('logo.update');
     Route::Resource('/meal', 'mealController');
     Route::Resource('/aboutUs', 'aboutUsController');
     Route::Resource('/OrderRestaurant', 'OrderController');
 });
+Route::get('/restaurant/{id}', 'Show\HomePageController@restaurant');
 
+
+/********************************* cart payment  route *****************/
 Route::Resource('/test', 'Restaurant\Test');
+Route::get('/add', 'Show\AddsController@index');
+Route::get('/detailsAdd/{id}', 'Show\AddsController@show');
+Route::get('/addToCart/{meal}', 'Restaurant\mealController@addToCart')->name('cart.add');
+Route::get('/shoppingCart', 'Restaurant\mealController@showCart')->name('cart.show');
+Route::get('/checkout/{amount}', 'Restaurant\mealController@checkout')->name('cart.checkout')->middleware('auth');
+Route::post('/charge', 'Restaurant\mealController@charge')->name('cart.charge');
+Route::get('/order', 'Restaurant\OrderController@index')->name('order.index')->middleware('auth');
+Route::delete('/meal/{meal}', 'Restaurant\mealController@destroyCart')->name('meal.remove');
+Route::put('/meal/{meal}', 'Restaurant\mealController@updateQtyAndPriceOrder')->name('meal.update');
+
+/*********************************  finish cart payment  route ******************/
+
+
+Route::get('chose/regester', function () {
+    return view('auth.ChoseUserAuth');
+});
+
+Route::get('/aboutUs/gaza/food', function () {
+    return view('aboutUs');
+});
+
+Route::Resource('/all/restaurant', 'Show\ShowAllRestaurant');
+
 
 //Route::get('/category', 'Restaurant\showCategorysController@getCategory')->middleware('auth:blogger');
 /* -----------------  Test Relation To Project  --------------- */
@@ -96,6 +119,7 @@ Route::get('/getAllRestaurantByServes', 'Admin\userResturentController@getAllRes
 Route::get('/getAdds/{id}', 'Admin\userResturentController@getAdds');
 Route::get('/getRestaurantByAdd/{id}', 'Admin\userResturentController@getRestaurantByAdd');
 Route::get('/getAllRestaurantByAdd', 'Admin\userResturentController@getAllRestaurantByAdd');
+/* ----------------- Finish Test Relation To Project  --------------- */
 
 
 
@@ -104,13 +128,3 @@ Route::get('/getAllRestaurantByAdd', 'Admin\userResturentController@getAllRestau
 
 
 
-
-Route::get('/add', 'Show\AddsController@index');
-Route::get('/detailsAdd/{id}', 'Show\AddsController@show');
-Route::get('/addToCart/{meal}', 'Restaurant\mealController@addToCart')->name('cart.add');
-Route::get('/shoppingCart', 'Restaurant\mealController@showCart')->name('cart.show');
-Route::get('/checkout/{amount}', 'Restaurant\mealController@checkout')->name('cart.checkout')->middleware('auth');
-Route::post('/charge', 'Restaurant\mealController@charge')->name('cart.charge');
-
-Route::get('/order', 'Restaurant\OrderController@index')->name('order.index')->middleware('auth');
-Route::delete('/meal/{meal}', 'Restaurant\mealController@destroyCart')->name('meal.remove');
